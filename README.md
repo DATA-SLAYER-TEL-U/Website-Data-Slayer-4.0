@@ -37,6 +37,7 @@ Buka http://localhost:5173
 ## Build production
 
 ```bash
+npm i
 npm run build
 npm run preview
 ```
