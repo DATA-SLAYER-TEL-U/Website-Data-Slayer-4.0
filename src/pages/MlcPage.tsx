@@ -75,7 +75,7 @@ const mlcFaqItems: FaqItem[] = [
 export const MlcPage: React.FC = () => {
   return (
     <>
-      <section className="pt-30 pb-12 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-b border-line text-center">
+      <section className="pt-30 pb-14 px-5 bg-gradient-to-b from-[#18215a]/80 via-[#12194a]/60 to-transparent border-b border-line/40 text-center">
         <div className="max-w-[56rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
             <span className="blink">●</span> MODE 01 — MLC
@@ -89,15 +89,15 @@ export const MlcPage: React.FC = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-3.5 mt-7">
-            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-lg border-2 border-line bg-panel/50 text-ink/60 cursor-not-allowed select-none">
+            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
               Guidebook
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/30 px-2 py-0.5 rounded">
                 SEGERA
               </span>
             </span>
-            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-lg border-2 border-line bg-panel/50 text-ink/60 cursor-not-allowed select-none">
+            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
               Registration
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/30 px-2 py-0.5 rounded">
                 SEGERA
               </span>
             </span>

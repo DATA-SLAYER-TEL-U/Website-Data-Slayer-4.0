@@ -3,7 +3,7 @@ import React from 'react';
 export const EventPage: React.FC = () => {
   return (
     <>
-      <section className="pt-30 pb-12 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-b border-line text-center">
+      <section className="pt-30 pb-14 px-5 bg-gradient-to-b from-[#18215a]/80 via-[#12194a]/60 to-transparent border-b border-line/40 text-center">
         <div className="max-w-[56rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
             <span className="blink">●</span> SIDE QUEST
@@ -21,7 +21,7 @@ export const EventPage: React.FC = () => {
       <section className="py-16 px-5" aria-labelledby="event-detail-title">
         <div className="max-w-[68rem] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-[17rem_1fr] gap-8 md:gap-12 items-start">
-            <div className="aspect-[4/5] border-2 border-line rounded-2xl bg-[radial-gradient(circle_at_50%_30%,#171d47,#0a0e27_75%)] flex flex-col items-center justify-center gap-3.5 text-center p-8">
+            <div className="aspect-[4/5] border-2 border-line rounded-2xl bg-gradient-to-b from-[#1c2668] to-[#12194a] flex flex-col items-center justify-center gap-3.5 text-center p-8 shadow-md">
               <svg className="pixel-icon text-cyan opacity-85" width="56" height="56" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0" y="2" width="8" height="5" fill="currentColor"/>
                 <rect x="2" y="1" width="2" height="1" fill="currentColor"/>

@@ -60,7 +60,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-12 pb-16 px-5 overflow-hidden" aria-labelledby="hero-title">
+      <section className="relative pt-12 pb-16 px-5 overflow-hidden bg-gradient-to-b from-[#18215a]/80 via-[#12194a]/60 to-transparent border-b border-line/40" aria-labelledby="hero-title">
         <div className="max-w-[52rem] mx-auto text-center">
           <div>
             <p className="font-pixel text-[0.6rem] md:text-[0.65rem] text-gold tracking-widest uppercase mb-4 inline-flex items-center justify-center gap-2">
@@ -136,7 +136,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Kategori */}
-      <section id="kategori" className="py-20 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-y border-line text-center" aria-labelledby="kategori-title">
+      <section id="kategori" className="py-20 px-5 bg-gradient-to-b from-[#18215a]/70 via-[#12194a]/50 to-transparent border-y border-line/40 text-center" aria-labelledby="kategori-title">
         <div className="max-w-[68rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan uppercase tracking-widest mb-2.5">Pilih Mode</p>
           <h2 id="kategori-title" className="font-pixel text-[clamp(1.35rem,4vw,2rem)] text-ink leading-snug">Dua Jalur, Satu Medan Perang</h2>

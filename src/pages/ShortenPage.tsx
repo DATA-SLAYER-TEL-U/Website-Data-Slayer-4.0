@@ -69,7 +69,7 @@ export const ShortenPage: React.FC = () => {
 
   return (
     <>
-      <section className="pt-30 pb-12 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-b border-line text-center">
+      <section className="pt-30 pb-14 px-5 bg-gradient-to-b from-[#18215a]/80 via-[#12194a]/60 to-transparent border-b border-line/40 text-center">
         <div className="max-w-[56rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
             <span className="blink">●</span> UTILITY MODULE
