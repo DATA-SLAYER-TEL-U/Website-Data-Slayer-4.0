@@ -69,24 +69,30 @@ export const ShortenPage: React.FC = () => {
 
   return (
     <>
-      <section className="sub-hero">
-        <div className="sub-hero-inner">
-          <p className="sub-hero-tag"><span className="blink">●</span> UTILITY MODULE</p>
-          <h1 className="sub-hero-title">Data Slayer<br />Custom Link</h1>
-          <p className="sub-hero-lead">
+      <section className="pt-30 pb-12 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-b border-line text-center">
+        <div className="max-w-[56rem] mx-auto">
+          <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
+            <span className="blink">●</span> UTILITY MODULE
+          </p>
+          <h1 className="font-pixel text-[clamp(1.6rem,5.5vw,2.75rem)] leading-tight text-ink [text-shadow:0_0_18px_rgba(0,229,255,0.4)]">
+            Data Slayer<br />Custom Link
+          </h1>
+          <p className="max-w-[40rem] mx-auto mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
             Buat link pendek yang mudah diingat dari URL apa pun — cocok buat dibagikan di poster,
             bio, atau grup panitia.
           </p>
 
-          <div className="terminal-panel">
+          <div className="border-2 border-line rounded-2xl p-6 sm:p-8 bg-panel/80 backdrop-blur-sm max-w-[36rem] mx-auto mt-10 shadow-[0_15px_35px_-10px_rgba(0,0,0,0.5)] text-left">
             <form id="shortenForm" onSubmit={handleSubmit} noValidate>
-              <div className="form-field">
-                <label className="form-label" htmlFor="longUrl">LONG URL</label>
+              <div className="mb-5">
+                <label className="block font-pixel text-[0.6rem] text-cyan mb-2 tracking-wider" htmlFor="longUrl">
+                  LONG URL
+                </label>
                 <input
                   id="longUrl"
                   name="longUrl"
                   type="url"
-                  className="form-input"
+                  className="w-full bg-void/80 border border-line rounded-xl px-4 py-3 text-ink font-body text-sm focus:outline-none focus:border-cyan focus:ring-1 focus:ring-cyan/40 transition-all placeholder:text-ink-dim/50"
                   placeholder="https://url-panjang-kamu.com/dengan/path"
                   value={longUrl}
                   onChange={(e) => setLongUrl(e.target.value)}
@@ -94,15 +100,19 @@ export const ShortenPage: React.FC = () => {
                 />
               </div>
 
-              <div className="form-field">
-                <label className="form-label" htmlFor="shortCode">CUSTOM CODE</label>
-                <div className="form-prefix-group">
-                  <span className="form-prefix">data-slayer.id/</span>
+              <div className="mb-6">
+                <label className="block font-pixel text-[0.6rem] text-cyan mb-2 tracking-wider" htmlFor="shortCode">
+                  CUSTOM CODE
+                </label>
+                <div className="flex items-center border border-line rounded-xl overflow-hidden focus-within:border-cyan focus-within:ring-1 focus-within:ring-cyan/40 transition-all bg-void/80">
+                  <span className="px-3.5 py-3 font-pixel text-[0.6rem] text-ink-dim bg-white/5 border-r border-line shrink-0 select-none">
+                    data-slayer.id/
+                  </span>
                   <input
                     id="shortCode"
                     name="shortCode"
                     type="text"
-                    className="form-input"
+                    className="w-full bg-transparent px-4 py-3 text-ink font-body text-sm focus:outline-none placeholder:text-ink-dim/50"
                     placeholder="link-kamu"
                     pattern="[\w\-]+"
                     title="Hanya huruf, angka, tanda hubung, dan garis bawah yang diperbolehkan."
@@ -116,7 +126,7 @@ export const ShortenPage: React.FC = () => {
               <button
                 type="submit"
                 id="shortenSubmit"
-                className="btn btn-cta form-submit"
+                className="w-full py-3.5 px-6 rounded-xl font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.35)] hover:shadow-[0_0_25px_rgba(0,229,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={loading}
               >
                 {loading ? 'MEMPROSES...' : 'BUAT LINK'}
@@ -124,9 +134,9 @@ export const ShortenPage: React.FC = () => {
             </form>
 
             {result && (
-              <div id="resultSuccess" className="result-panel result-panel--success is-visible">
-                <div className="result-panel-head">
-                  <svg className="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+              <div id="resultSuccess" className="mt-6 p-4 rounded-xl border border-cyan/40 bg-cyan/10">
+                <div className="flex items-center gap-2 font-pixel text-xs text-cyan">
+                  <svg className="pixel-icon" width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1" y="4" width="1" height="1" fill="currentColor"/>
                     <rect x="2" y="5" width="1" height="1" fill="currentColor"/>
                     <rect x="3" y="6" width="1" height="1" fill="currentColor"/>
@@ -137,14 +147,19 @@ export const ShortenPage: React.FC = () => {
                   </svg>
                   <span>Link berhasil dibuat!</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
-                  <a id="resultLink" className="result-link" href={result} target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center gap-3 mt-3 flex-wrap">
+                  <a
+                    id="resultLink"
+                    className="font-pixel text-xs text-cyan break-all px-3 py-2.5 bg-void rounded-lg border border-line flex-1 hover:underline"
+                    href={result}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {result}
                   </a>
                   <button
                     type="button"
-                    className="btn btn-ghost"
-                    style={{ padding: '0.4rem 0.8rem', fontSize: '0.55rem' }}
+                    className="font-pixel text-[0.6rem] px-4 py-2.5 rounded-lg border border-line bg-panel hover:border-cyan/50 hover:text-cyan transition-all cursor-pointer shrink-0"
                     onClick={handleCopy}
                   >
                     {copied ? 'TERSALIN!' : 'SALIN'}
@@ -154,9 +169,9 @@ export const ShortenPage: React.FC = () => {
             )}
 
             {error && (
-              <div id="resultError" className="result-panel result-panel--error is-visible">
-                <div className="result-panel-head">
-                  <svg className="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+              <div id="resultError" className="mt-6 p-4 rounded-xl border border-rose-500/40 bg-rose-500/10">
+                <div className="flex items-center gap-2 font-pixel text-xs text-rose-400">
+                  <svg className="pixel-icon" width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                     <rect x="3" y="0" width="2" height="1" fill="currentColor"/>
                     <rect x="2" y="1" width="4" height="1" fill="currentColor"/>
                     <rect x="2" y="2" width="4" height="1" fill="currentColor"/>
@@ -171,7 +186,7 @@ export const ShortenPage: React.FC = () => {
               </div>
             )}
 
-            <p className="form-note">
+            <p className="mt-6 text-xs text-ink-dim leading-relaxed">
               Mode demo — link belum tersimpan permanen. Setelah backend resmi Data Slayer 4.0 siap,
               tool ini akan tersambung otomatis ke server pemendek link sungguhan.
             </p>

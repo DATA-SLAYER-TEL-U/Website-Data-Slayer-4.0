@@ -75,18 +75,32 @@ const mlcFaqItems: FaqItem[] = [
 export const MlcPage: React.FC = () => {
   return (
     <>
-      <section className="sub-hero">
-        <div className="sub-hero-inner">
-          <p className="sub-hero-tag"><span className="blink">●</span> MODE 01 — MLC</p>
-          <h1 className="sub-hero-title">Machine Learning<br />Competition</h1>
-          <p className="sub-hero-lead">
+      <section className="pt-30 pb-12 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-b border-line text-center">
+        <div className="max-w-[56rem] mx-auto">
+          <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
+            <span className="blink">●</span> MODE 01 — MLC
+          </p>
+          <h1 className="font-pixel text-[clamp(1.6rem,5.5vw,2.75rem)] leading-tight text-ink [text-shadow:0_0_18px_rgba(0,229,255,0.4)]">
+            Machine Learning<br />Competition
+          </h1>
+          <p className="max-w-[40rem] mx-auto mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
             Terapkan ilmu data dan kecerdasan buatan untuk menyelesaikan permasalahan nyata.
             Adu akurasi model kamu di papan skor dan buktikan strategimu yang paling tajam.
           </p>
 
-          <div className="sub-hero-actions">
-            <a href="#" className="btn btn-ghost" aria-disabled="true">Guidebook <span className="badge-soon" style={{ marginInlineStart: '0.5rem' }}>SEGERA</span></a>
-            <a href="#" className="btn btn-ghost" aria-disabled="true">Registration <span className="badge-soon" style={{ marginInlineStart: '0.5rem' }}>SEGERA</span></a>
+          <div className="flex flex-wrap justify-center gap-3.5 mt-7">
+            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-lg border-2 border-line bg-panel/50 text-ink/60 cursor-not-allowed select-none">
+              Guidebook
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">
+                SEGERA
+              </span>
+            </span>
+            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-lg border-2 border-line bg-panel/50 text-ink/60 cursor-not-allowed select-none">
+              Registration
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">
+                SEGERA
+              </span>
+            </span>
           </div>
 
           <Countdown targetDate="" />
@@ -94,49 +108,89 @@ export const MlcPage: React.FC = () => {
       </section>
 
       {/* Info MLC */}
-      <section className="section" aria-labelledby="info-mlc-title">
-        <div className="section-inner">
-          <p className="section-eyebrow">Detail Misi</p>
-          <h2 id="info-mlc-title" className="section-title">Tentang Kompetisi MLC</h2>
-          <p className="section-lead">
+      <section className="py-16 px-5" aria-labelledby="info-mlc-title">
+        <div className="max-w-[68rem] mx-auto">
+          <p className="font-pixel text-[0.6rem] text-cyan tracking-wider mb-2.5">Detail Misi</p>
+          <h2 id="info-mlc-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] leading-snug">
+            Tentang Kompetisi MLC
+          </h2>
+          <p className="text-ink-dim mt-3 max-w-[46ch] leading-relaxed text-sm md:text-base">
             Pelajari ketentuan teknis, kriteria penilaian, dan alur pengerjaan sebelum memulai kompetisi.
           </p>
 
-          <div className="info-grid">
-            <div className="info-card">
-              <h3 className="info-card-title">Deskripsi Kompetisi</h3>
-              <p className="info-card-text">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Deskripsi Kompetisi
+              </h3>
+              <p className="mt-3.5 text-ink-dim text-sm leading-relaxed flex-1">
                 MLC menguji kemampuan peserta dalam merancang model machine learning yang presisi dan
                 tahan uji terhadap data unseen. Fokus kompetisi mencakup pembersihan data, feature
                 engineering, pemodelan, evaluasi performa, serta dokumentasi solusi yang terstruktur.
               </p>
             </div>
 
-            <div className="info-card">
-              <h3 className="info-card-title">Format Pengerjaan</h3>
-              <ul className="info-card-list">
-                <li><span>Format data</span><strong>Dataset tabular / multi-feature</strong></li>
-                <li><span>Bahasa pemrograman</span><strong>Python (bebas library)</strong></li>
-                <li><span>Batas submission</span><strong>Maksimal 3 submission / hari</strong></li>
-                <li><span>Evaluasi akhir</span><strong>Presentasi di babak final</strong></li>
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Format Pengerjaan
+              </h3>
+              <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Format data</span>
+                  <strong className="text-ink font-semibold text-right">Dataset tabular / multi-feature</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Bahasa pemrograman</span>
+                  <strong className="text-ink font-semibold text-right">Python (bebas library)</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Batas submission</span>
+                  <strong className="text-ink font-semibold text-right">Maksimal 3 submission / hari</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm">
+                  <span className="text-ink-dim shrink-0">Evaluasi akhir</span>
+                  <strong className="text-ink font-semibold text-right">Presentasi di babak final</strong>
+                </li>
               </ul>
             </div>
 
-            <div className="info-card">
-              <h3 className="info-card-title">Bobot Penilaian</h3>
-              <ul className="info-card-list">
-                <li><span>Skor Leaderboard (Akurasi/Metrik)</span><strong>60%</strong></li>
-                <li><span>Metodologi &amp; Feature Engineering</span><strong>20%</strong></li>
-                <li><span>Presentasi Solusi &amp; Q&amp;A</span><strong>20%</strong></li>
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Bobot Penilaian
+              </h3>
+              <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Skor Leaderboard (Akurasi/Metrik)</span>
+                  <strong className="text-cyan font-semibold text-right">60%</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Metodologi &amp; Feature Engineering</span>
+                  <strong className="text-cyan font-semibold text-right">20%</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm">
+                  <span className="text-ink-dim shrink-0">Presentasi Solusi &amp; Q&amp;A</span>
+                  <strong className="text-cyan font-semibold text-right">20%</strong>
+                </li>
               </ul>
             </div>
 
-            <div className="info-card">
-              <h3 className="info-card-title">Fasilitas Peserta</h3>
-              <ul className="info-card-list">
-                <li><span>E-Sertifikat Nasional</span><strong>Semua tim terverifikasi</strong></li>
-                <li><span>Guidebook &amp; Dataset</span><strong>Akses penuh peserta</strong></li>
-                <li><span>Feedback Dewan Juri</span><strong>Khusus finalis</strong></li>
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Fasilitas Peserta
+              </h3>
+              <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">E-Sertifikat Nasional</span>
+                  <strong className="text-ink font-semibold text-right">Semua tim terverifikasi</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Guidebook &amp; Dataset</span>
+                  <strong className="text-ink font-semibold text-right">Akses penuh peserta</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm">
+                  <span className="text-ink-dim shrink-0">Feedback Dewan Juri</span>
+                  <strong className="text-ink font-semibold text-right">Khusus finalis</strong>
+                </li>
               </ul>
             </div>
           </div>
@@ -161,12 +215,23 @@ export const MlcPage: React.FC = () => {
       />
 
       {/* CTA */}
-      <section className="section cta-section" aria-labelledby="cta-mlc-title">
-        <div className="section-inner section-inner--narrow cta-inner">
-          <span className="badge-soon">PENDAFTARAN SEGERA DIBUKA</span>
-          <h2 id="cta-mlc-title" className="section-title" style={{ marginTop: '1.25rem' }}>Siap Latih Modelmu?</h2>
-          <p className="section-lead">Ikuti info terbaru supaya tidak ketinggalan gelombang pendaftaran MLC.</p>
-          <Link to="/" className="btn btn-cta btn-lg">Kembali ke Beranda</Link>
+      <section className="py-16 px-5 text-center" aria-labelledby="cta-mlc-title">
+        <div className="max-w-[42rem] mx-auto flex flex-col items-center">
+          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(0,229,255,0.1)]">
+            PENDAFTARAN SEGERA DIBUKA
+          </span>
+          <h2 id="cta-mlc-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] mt-5">
+            Siap Latih Modelmu?
+          </h2>
+          <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
+            Ikuti info terbaru supaya tidak ketinggalan gelombang pendaftaran MLC.
+          </p>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+          >
+            Kembali ke Beranda
+          </Link>
         </div>
       </section>
     </>

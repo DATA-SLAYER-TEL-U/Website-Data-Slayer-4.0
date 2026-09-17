@@ -81,18 +81,32 @@ const dacFaqItems: FaqItem[] = [
 export const DacPage: React.FC = () => {
   return (
     <>
-      <section className="sub-hero">
-        <div className="sub-hero-inner">
-          <p className="sub-hero-tag"><span className="blink">●</span> MODE 02 — DAC</p>
-          <h1 className="sub-hero-title">Dashboard Analytics<br />Competition</h1>
-          <p className="sub-hero-lead">
+      <section className="pt-30 pb-12 px-5 bg-[radial-gradient(circle_at_50%_0%,#171d47,#090c22_75%)] border-b border-line text-center">
+        <div className="max-w-[56rem] mx-auto">
+          <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
+            <span className="blink">●</span> MODE 02 — DAC
+          </p>
+          <h1 className="font-pixel text-[clamp(1.6rem,5.5vw,2.75rem)] leading-tight text-ink [text-shadow:0_0_18px_rgba(0,229,255,0.4)]">
+            Dashboard Analytics<br />Competition
+          </h1>
+          <p className="max-w-[40rem] mx-auto mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
             Rancang visualisasi data interaktif yang memukau dan mampu menyampaikan cerita di balik angka
             secara tajam, estetik, dan berdampak bagi pengambilan keputusan.
           </p>
 
-          <div className="sub-hero-actions">
-            <a href="#" className="btn btn-ghost" aria-disabled="true">Guidebook <span className="badge-soon" style={{ marginInlineStart: '0.5rem' }}>SEGERA</span></a>
-            <a href="#" className="btn btn-ghost" aria-disabled="true">Registration <span className="badge-soon" style={{ marginInlineStart: '0.5rem' }}>SEGERA</span></a>
+          <div className="flex flex-wrap justify-center gap-3.5 mt-7">
+            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-lg border-2 border-line bg-panel/50 text-ink/60 cursor-not-allowed select-none">
+              Guidebook
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">
+                SEGERA
+              </span>
+            </span>
+            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-lg border-2 border-line bg-panel/50 text-ink/60 cursor-not-allowed select-none">
+              Registration
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">
+                SEGERA
+              </span>
+            </span>
           </div>
 
           <Countdown targetDate="" />
@@ -100,49 +114,89 @@ export const DacPage: React.FC = () => {
       </section>
 
       {/* Info DAC */}
-      <section className="section" aria-labelledby="info-dac-title">
-        <div className="section-inner">
-          <p className="section-eyebrow">Detail Misi</p>
-          <h2 id="info-dac-title" className="section-title">Tentang Kompetisi DAC</h2>
-          <p className="section-lead">
+      <section className="py-16 px-5" aria-labelledby="info-dac-title">
+        <div className="max-w-[68rem] mx-auto">
+          <p className="font-pixel text-[0.6rem] text-cyan tracking-wider mb-2.5">Detail Misi</p>
+          <h2 id="info-dac-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] leading-snug">
+            Tentang Kompetisi DAC
+          </h2>
+          <p className="text-ink-dim mt-3 max-w-[46ch] leading-relaxed text-sm md:text-base">
             Pahami panduan analitik, ekspektasi visual, dan bobot penilaian dasbor kamu.
           </p>
 
-          <div className="info-grid">
-            <div className="info-card">
-              <h3 className="info-card-title">Deskripsi Kompetisi</h3>
-              <p className="info-card-text">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Deskripsi Kompetisi
+              </h3>
+              <p className="mt-3.5 text-ink-dim text-sm leading-relaxed flex-1">
                 DAC berfokus pada kemampuan peserta mengubah data mentah menjadi dasbor bisnis intelijen
                 interaktif yang mudah dipahami, bernilai strategis, dan memberikan rekomendasi nyata
                 berdasarkan temuan data.
               </p>
             </div>
 
-            <div className="info-card">
-              <h3 className="info-card-title">Format Pengerjaan</h3>
-              <ul className="info-card-list">
-                <li><span>Studi kasus</span><strong>Dataset bisnis &amp; operasional</strong></li>
-                <li><span>Platform visualisasi</span><strong>Tableau / Power BI / Looker Studio</strong></li>
-                <li><span>Output penyisihan</span><strong>Link dasbor publik + video ringkas</strong></li>
-                <li><span>Babak final</span><strong>Paper pendukung + sesi presentasi</strong></li>
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Format Pengerjaan
+              </h3>
+              <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Studi kasus</span>
+                  <strong className="text-ink font-semibold text-right">Dataset bisnis &amp; operasional</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Platform visualisasi</span>
+                  <strong className="text-ink font-semibold text-right">Tableau / Power BI / Looker Studio</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Output penyisihan</span>
+                  <strong className="text-ink font-semibold text-right">Link dasbor publik + video ringkas</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm">
+                  <span className="text-ink-dim shrink-0">Babak final</span>
+                  <strong className="text-ink font-semibold text-right">Paper pendukung + sesi presentasi</strong>
+                </li>
               </ul>
             </div>
 
-            <div className="info-card">
-              <h3 className="info-card-title">Bobot Penilaian</h3>
-              <ul className="info-card-list">
-                <li><span>Kekuatan Visualisasi &amp; UX</span><strong>35%</strong></li>
-                <li><span>Insight Bisnis &amp; Analisis</span><strong>35%</strong></li>
-                <li><span>Presentasi &amp; Relevansi Solusi</span><strong>30%</strong></li>
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Bobot Penilaian
+              </h3>
+              <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Kekuatan Visualisasi &amp; UX</span>
+                  <strong className="text-cyan font-semibold text-right">35%</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Insight Bisnis &amp; Analisis</span>
+                  <strong className="text-cyan font-semibold text-right">35%</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm">
+                  <span className="text-ink-dim shrink-0">Presentasi &amp; Relevansi Solusi</span>
+                  <strong className="text-cyan font-semibold text-right">30%</strong>
+                </li>
               </ul>
             </div>
 
-            <div className="info-card">
-              <h3 className="info-card-title">Fasilitas Peserta</h3>
-              <ul className="info-card-list">
-                <li><span>E-Sertifikat Nasional</span><strong>Semua tim terverifikasi</strong></li>
-                <li><span>Dataset &amp; Panduan</span><strong>Akses lengkap peserta</strong></li>
-                <li><span>Feedback Juri &amp; Exposure</span><strong>Khusus finalis terpilih</strong></li>
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+              <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
+                Fasilitas Peserta
+              </h3>
+              <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">E-Sertifikat Nasional</span>
+                  <strong className="text-ink font-semibold text-right">Semua tim terverifikasi</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
+                  <span className="text-ink-dim shrink-0">Dataset &amp; Panduan</span>
+                  <strong className="text-ink font-semibold text-right">Akses lengkap peserta</strong>
+                </li>
+                <li className="flex justify-between items-baseline gap-4 text-sm">
+                  <span className="text-ink-dim shrink-0">Feedback Juri &amp; Exposure</span>
+                  <strong className="text-ink font-semibold text-right">Khusus finalis terpilih</strong>
+                </li>
               </ul>
             </div>
           </div>
@@ -167,12 +221,23 @@ export const DacPage: React.FC = () => {
       />
 
       {/* CTA */}
-      <section className="section cta-section" aria-labelledby="cta-dac-title">
-        <div className="section-inner section-inner--narrow cta-inner">
-          <span className="badge-soon">PENDAFTARAN SEGERA DIBUKA</span>
-          <h2 id="cta-dac-title" className="section-title" style={{ marginTop: '1.25rem' }}>Siap Rancang Dashboardmu?</h2>
-          <p className="section-lead">Persiapkan cerita di balik datamu dan buktikan keunggulan analitik tim kamu.</p>
-          <Link to="/" className="btn btn-cta btn-lg">Kembali ke Beranda</Link>
+      <section className="py-16 px-5 text-center" aria-labelledby="cta-dac-title">
+        <div className="max-w-[42rem] mx-auto flex flex-col items-center">
+          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(0,229,255,0.1)]">
+            PENDAFTARAN SEGERA DIBUKA
+          </span>
+          <h2 id="cta-dac-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] mt-5">
+            Siap Rancang Dashboardmu?
+          </h2>
+          <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
+            Persiapkan cerita di balik datamu dan buktikan keunggulan analitik tim kamu.
+          </p>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+          >
+            Kembali ke Beranda
+          </Link>
         </div>
       </section>
     </>

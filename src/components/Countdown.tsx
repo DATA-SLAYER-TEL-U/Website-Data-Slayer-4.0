@@ -53,27 +53,30 @@ export const Countdown: React.FC<CountdownProps> = ({
   }, [targetDate]);
 
   return (
-    <div className="hero-countdown-panel" aria-live="polite">
-      <p className="countdown-label">{label}</p>
-      <div className="countdown">
-        <div className="countdown-digit">
-          <span>{timeLeft.days}</span>
-          <small>Hari</small>
+    <div
+      className="max-w-[28rem] md:max-w-[32rem] mx-auto mt-8 p-5 md:p-6 rounded-2xl bg-panel/60 border border-white/10 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] text-center w-full"
+      aria-live="polite"
+    >
+      <p className="text-xs md:text-sm text-ink-dim mb-3.5 font-medium">{label}</p>
+      <div className="flex justify-center gap-2.5 flex-wrap">
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+          <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.days}</span>
+          <small className="text-[0.6rem] text-ink-dim mt-1">Hari</small>
         </div>
-        <div className="countdown-digit">
-          <span>{timeLeft.hours}</span>
-          <small>Jam</small>
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+          <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.hours}</span>
+          <small className="text-[0.6rem] text-ink-dim mt-1">Jam</small>
         </div>
-        <div className="countdown-digit">
-          <span>{timeLeft.mins}</span>
-          <small>Menit</small>
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+          <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.mins}</span>
+          <small className="text-[0.6rem] text-ink-dim mt-1">Menit</small>
         </div>
-        <div className="countdown-digit">
-          <span>{timeLeft.secs}</span>
-          <small>Detik</small>
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+          <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.secs}</span>
+          <small className="text-[0.6rem] text-ink-dim mt-1">Detik</small>
         </div>
       </div>
-      {note && <p className="form-note" style={{ marginTop: '0.85rem' }}>{note}</p>}
+      {note && <p className="text-xs text-ink-dim/80 mt-3">{note}</p>}
     </div>
   );
 };
