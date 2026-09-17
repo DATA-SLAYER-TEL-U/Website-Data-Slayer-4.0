@@ -1,17 +1,24 @@
 export function initMobileNav(): void {
   const toggle = document.getElementById('navToggle');
   const menu = document.getElementById('mobileNav');
+  const header = toggle?.closest('.site-header');
   if (!toggle || !menu) return;
 
   const close = () => {
     toggle.setAttribute('aria-expanded', 'false');
     menu.hidden = true;
+    header?.classList.remove('is-open');
   };
 
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
     menu.hidden = expanded;
+    if (!expanded) {
+      header?.classList.add('is-open');
+    } else {
+      header?.classList.remove('is-open');
+    }
   });
 
   menu.querySelectorAll('a').forEach((link) => {

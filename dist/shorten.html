@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/coin.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shorten Link — Data Slayer 4.0</title>
+    <meta name="description" content="Buat link pendek Data Slayer 4.0 dari URL apa pun." />
+    <script type="module" crossorigin src="/assets/main-DGwbm71x.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CBAA5wfD.css">
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <a href="#main" class="skip-link">Lewati ke konten</a>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Data Slayer 4.0 — Beranda">
+          <span class="logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M12 12v9M12 12L2 7M12 12l10-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>DATA<span class="logo-accent">SLAYER</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+          <a href="mlc.html">MLC</a>
+          <a href="dac.html">DAC</a>
+          <a href="event.html">Event</a>
+          <a href="shorten.html">Shorten</a>
+        </nav>
+
+        <a href="index.html#daftar" class="btn btn-cta header-cta">Daftar Sekarang</a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav id="mobileNav" class="mobile-nav" aria-label="Navigasi mobile" hidden>
+        <a href="index.html">Beranda</a>
+        <a href="mlc.html">MLC</a>
+        <a href="dac.html">DAC</a>
+        <a href="event.html">Event</a>
+        <a href="shorten.html">Shorten</a>
+        <a href="index.html#daftar" class="btn btn-cta">Daftar Sekarang</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="sub-hero">
+        <div class="sub-hero-inner">
+          <p class="sub-hero-tag"><span class="blink">●</span> UTILITY MODULE</p>
+          <h1 class="sub-hero-title">Data Slayer<br />Custom Link</h1>
+          <p class="sub-hero-lead">
+            Buat link pendek yang mudah diingat dari URL apa pun — cocok buat dibagikan di poster,
+            bio, atau grup panitia.
+          </p>
+
+          <div class="terminal-panel">
+            <form id="shortenForm" novalidate>
+              <div class="form-field">
+                <label class="form-label" for="longUrl">LONG URL</label>
+                <input
+                  id="longUrl"
+                  name="longUrl"
+                  type="url"
+                  class="form-input"
+                  placeholder="https://url-panjang-kamu.com/dengan/path"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="shortCode">CUSTOM CODE</label>
+                <div class="form-prefix-group">
+                  <span class="form-prefix">data-slayer.id/</span>
+                  <input
+                    id="shortCode"
+                    name="shortCode"
+                    type="text"
+                    class="form-input"
+                    placeholder="link-kamu"
+                    pattern="[\w\-]+"
+                    title="Hanya huruf, angka, tanda hubung, dan garis bawah yang diperbolehkan."
+                    required
+                  />
+                </div>
+              </div>
+
+              <button type="submit" id="shortenSubmit" class="btn btn-cta form-submit">BUAT LINK</button>
+            </form>
+
+            <div id="resultSuccess" class="result-panel result-panel--success">
+              <div class="result-panel-head">
+                <svg class="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="1" y="4" width="1" height="1" fill="currentColor"/>
+                  <rect x="2" y="5" width="1" height="1" fill="currentColor"/>
+                  <rect x="3" y="6" width="1" height="1" fill="currentColor"/>
+                  <rect x="4" y="5" width="1" height="1" fill="currentColor"/>
+                  <rect x="5" y="4" width="1" height="1" fill="currentColor"/>
+                  <rect x="6" y="3" width="1" height="1" fill="currentColor"/>
+                  <rect x="7" y="2" width="1" height="1" fill="currentColor"/>
+                </svg>
+                <span>Link berhasil dibuat!</span>
+              </div>
+              <a id="resultLink" class="result-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+
+            <div id="resultError" class="result-panel result-panel--error">
+              <div class="result-panel-head">
+                <svg class="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="0" width="2" height="1" fill="currentColor"/>
+                  <rect x="2" y="1" width="4" height="1" fill="currentColor"/>
+                  <rect x="2" y="2" width="4" height="1" fill="currentColor"/>
+                  <rect x="1" y="3" width="6" height="1" fill="currentColor"/>
+                  <rect x="1" y="4" width="6" height="1" fill="currentColor"/>
+                  <rect x="0" y="5" width="8" height="1" fill="currentColor"/>
+                  <rect x="3" y="1" width="1" height="2" fill="#0a0e27"/>
+                  <rect x="3" y="4" width="1" height="1" fill="#0a0e27"/>
+                </svg>
+                <span id="errorMessage">Terjadi kesalahan.</span>
+              </div>
+            </div>
+
+            <p class="form-note">
+              Mode demo — link belum tersimpan permanen. Setelah backend resmi Data Slayer 4.0 siap,
+              tool ini akan tersambung otomatis ke server pemendek link sungguhan.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo logo--footer">DATA<span class="logo-accent">SLAYER</span> 4.0</span>
+          <p>Kompetisi Machine Learning &amp; Dashboard Analytics oleh HMSD Telkom University Purwokerto.</p>
+        </div>
+        <div class="footer-links">
+          <p class="footer-heading">Navigasi</p>
+          <a href="index.html">Beranda</a>
+          <a href="mlc.html">MLC</a>
+          <a href="dac.html">DAC</a>
+          <a href="event.html">Event</a>
+          <a href="shorten.html">Shorten Link</a>
+        </div>
+        <div class="footer-contact">
+          <p>Kontak Panitia</p>
+          <div class="footer-social">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg class="pixel-icon" width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="8" height="8" fill="currentColor"/>
+                <rect x="2" y="2" width="4" height="4" fill="#0a0e27"/>
+                <rect x="3" y="3" width="2" height="2" fill="currentColor"/>
+                <rect x="6" y="1" width="1" height="1" fill="#0a0e27"/>
+              </svg>
+            </a>
+            <a href="mailto:dataslayer.tup@gmail.com" aria-label="Email">
+              <svg class="pixel-icon" width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="1" width="8" height="6" fill="currentColor"/>
+                <polygon points="0,1 4,4.5 8,1" fill="#0a0e27"/>
+              </svg>
+            </a>
+          </div>
+          <a href="mailto:dataslayer.tup@gmail.com">dataslayer.tup@gmail.com</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2027 Data Slayer 4.0. GAME OVER? INSERT COIN.</p>
+    </footer>
+
+  </body>
+</html>
