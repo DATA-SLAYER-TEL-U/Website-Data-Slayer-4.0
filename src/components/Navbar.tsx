@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
           >
             Event
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/shorten"
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
@@ -88,7 +88,7 @@ export const Navbar: React.FC = () => {
             }
           >
             Shorten
-          </NavLink>
+          </NavLink> */}
         </nav>
 
         <a

@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
             <Link to="/mlc" className="hover:text-cyan transition-colors">MLC</Link>
             <Link to="/dac" className="hover:text-cyan transition-colors">DAC</Link>
             <Link to="/event" className="hover:text-cyan transition-colors">Event</Link>
-            <Link to="/shorten" className="hover:text-cyan transition-colors">Shorten Link</Link>
+            {/* <Link to="/shorten" className="hover:text-cyan transition-colors">Shorten Link</Link> */}
           </div>
         </div>
 

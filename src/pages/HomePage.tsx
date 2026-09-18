@@ -60,7 +60,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-12 pb-16 px-5 overflow-hidden bg-gradient-to-b from-[#18215a]/80 via-[#12194a]/60 to-transparent border-b border-line/40" aria-labelledby="hero-title">
+      <section className="relative pt-12 pb-16 px-5 overflow-hidden bg-gradient-to-b from-transparent via-[#18215a]/45 to-transparent border-b border-line/40" aria-labelledby="hero-title">
         <div className="max-w-[52rem] mx-auto text-center">
           <div>
             <p className="font-pixel text-[0.6rem] md:text-[0.65rem] text-gold tracking-widest uppercase mb-4 inline-flex items-center justify-center gap-2">
