@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
 
         <a
           href="/#daftar"
-          className="hidden md:inline-flex items-center justify-center rounded-full px-6 py-2.5 font-body text-xs md:text-sm font-bold text-ink bg-gradient-to-r from-panel-2 to-panel shadow-[0_0_16px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap"
+          className="hidden min-[900px]:inline-flex items-center justify-center rounded-full px-6 py-2.5 font-body text-xs md:text-sm font-bold text-ink bg-gradient-to-r from-panel-2 to-panel shadow-[0_0_16px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap"
         >
           Daftar Sekarang
         </a>
