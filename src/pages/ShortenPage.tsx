@@ -69,16 +69,16 @@ export const ShortenPage: React.FC = () => {
 
   return (
     <>
-      <section className="pt-30 pb-14 px-5 bg-gradient-to-b from-transparent via-[#18215a]/45 to-transparent border-b border-line/40 text-center">
+      <section className="pt-30 pb-14 px-5 border-b border-line/40 text-center">
         <div className="max-w-[56rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
             <span className="blink">●</span> UTILITY MODULE
           </p>
-          <h1 className="font-pixel text-[clamp(1.6rem,5.5vw,2.75rem)] leading-tight text-ink [text-shadow:0_0_18px_rgba(0,229,255,0.4)]">
-            Data Slayer<br />Custom Link
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold tracking-tight leading-tight text-ink">
+            Data Slayer <span className="text-cyan [text-shadow:0_0_20px_rgba(255,255,255,0.45)]">Custom Link</span>
           </h1>
           <p className="max-w-[40rem] mx-auto mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
-            Buat link pendek yang mudah diingat dari URL apa pun — cocok buat dibagikan di poster,
+            Buat link pendek yang mudah diingat dari URL apa pun, cocok buat dibagikan di poster,
             bio, atau grup panitia.
           </p>
 
@@ -126,7 +126,7 @@ export const ShortenPage: React.FC = () => {
               <button
                 type="submit"
                 id="shortenSubmit"
-                className="w-full py-3.5 px-6 rounded-xl font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.35)] hover:shadow-[0_0_25px_rgba(0,229,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3.5 px-6 rounded-xl font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.35)] hover:shadow-[0_0_25px_rgba(255,255,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={loading}
               >
                 {loading ? 'MEMPROSES...' : 'BUAT LINK'}
@@ -187,7 +187,7 @@ export const ShortenPage: React.FC = () => {
             )}
 
             <p className="mt-6 text-xs text-ink-dim leading-relaxed">
-              Mode demo — link belum tersimpan permanen. Setelah backend resmi Data Slayer 4.0 siap,
+              Mode demo: link belum tersimpan permanen. Setelah backend resmi Data Slayer 4.0 siap,
               tool ini akan tersambung otomatis ke server pemendek link sungguhan.
             </p>
           </div>

@@ -1,5 +1,5 @@
 /**
- * Form pemendek link — MODE DEMO.
+ * Form pemendek link: MODE DEMO.
  * Belum tersambung ke backend asli. Saat backend/API resmi sudah ada,
  * ganti fungsi `fakeShorten` di bawah dengan pemanggilan endpoint POST
  * (lihat komentar TODO), lalu hapus catatan "mode demo" di form-note.
@@ -10,7 +10,7 @@ interface ShortenResult {
   longUrl: string;
 }
 
-// Menyimpan hasil demo selama sesi (hilang saat reload) — placeholder saja.
+// Menyimpan hasil demo selama sesi (hilang saat reload): placeholder saja.
 const demoStore = new Map<string, string>();
 
 function isValidUrl(value: string): boolean {

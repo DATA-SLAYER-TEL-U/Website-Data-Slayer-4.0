@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-line mt-20 pt-16 pb-12 px-5 bg-[#0a0f2e]">
+    <footer className="border-t border-line mt-20 pt-16 pb-12 px-5 bg-void">
       <div className="max-w-[68rem] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
         <div>
-          <div className="font-pixel text-base tracking-wider text-ink">
-            DATA<span className="text-cyan ml-0.5">SLAYER</span> 4.0
-          </div>
+          <img src="/logo.png" alt="Data Slayer Logo" className="h-10 md:h-12 w-auto object-contain mb-3" />
           <p className="mt-3.5 text-ink-dim text-sm max-w-[34ch] leading-relaxed">
             Kompetisi Machine Learning &amp; Dashboard Analytics oleh HMSD Telkom University Purwokerto.
           </p>
@@ -29,13 +27,13 @@ export const Footer: React.FC = () => {
           <p className="font-pixel text-[0.55rem] text-ink-dim tracking-wider uppercase mb-4">Kontak Panitia</p>
           <div className="flex items-center gap-3 mb-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="w-9 h-9 rounded-lg border border-line flex items-center justify-center text-ink-dim hover:text-cyan hover:border-cyan transition-all"
+              aria-label="Instagram Resmi Data Slayer"
+              className="w-11 h-11 rounded-lg border border-line flex items-center justify-center text-ink-dim hover:text-cyan hover:border-cyan transition-all"
             >
-              <svg className="pixel-icon" width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+              <svg className="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0" y="0" width="8" height="8" fill="currentColor"/>
                 <rect x="2" y="2" width="4" height="4" fill="#0a0e27"/>
                 <rect x="3" y="3" width="2" height="2" fill="currentColor"/>
@@ -44,10 +42,10 @@ export const Footer: React.FC = () => {
             </a>
             <a
               href="mailto:dataslayer.tup@gmail.com"
-              aria-label="Email"
-              className="w-9 h-9 rounded-lg border border-line flex items-center justify-center text-ink-dim hover:text-cyan hover:border-cyan transition-all"
+              aria-label="Email Panitia Data Slayer"
+              className="w-11 h-11 rounded-lg border border-line flex items-center justify-center text-ink-dim hover:text-cyan hover:border-cyan transition-all"
             >
-              <svg className="pixel-icon" width="16" height="16" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+              <svg className="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0" y="1" width="8" height="6" fill="currentColor"/>
                 <polygon points="0,1 4,4.5 8,1" fill="#0a0e27"/>
               </svg>

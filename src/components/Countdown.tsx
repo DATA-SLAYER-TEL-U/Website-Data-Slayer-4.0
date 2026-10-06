@@ -59,19 +59,19 @@ export const Countdown: React.FC<CountdownProps> = ({
     >
       <p className="text-xs md:text-sm text-ink-dim mb-3.5 font-medium">{label}</p>
       <div className="flex justify-center gap-2.5 flex-wrap">
-        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(255,255,255,0.25)] transition-all duration-200">
           <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.days}</span>
           <small className="text-[0.6rem] text-ink-dim mt-1">Hari</small>
         </div>
-        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(255,255,255,0.25)] transition-all duration-200">
           <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.hours}</span>
           <small className="text-[0.6rem] text-ink-dim mt-1">Jam</small>
         </div>
-        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(255,255,255,0.25)] transition-all duration-200">
           <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.mins}</span>
           <small className="text-[0.6rem] text-ink-dim mt-1">Menit</small>
         </div>
-        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(0,229,255,0.25)] transition-all duration-200">
+        <div className="flex flex-col items-center bg-void border border-line rounded-lg py-2.5 px-3 min-w-[4.2rem] hover:-translate-y-0.5 hover:border-cyan hover:shadow-[0_0_16px_rgba(255,255,255,0.25)] transition-all duration-200">
           <span className="font-pixel text-base md:text-lg text-cyan">{timeLeft.secs}</span>
           <small className="text-[0.6rem] text-ink-dim mt-1">Detik</small>
         </div>

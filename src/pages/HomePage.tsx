@@ -60,16 +60,15 @@ export const HomePage: React.FC = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-12 pb-16 px-5 overflow-hidden bg-gradient-to-b from-transparent via-[#18215a]/45 to-transparent border-b border-line/40" aria-labelledby="hero-title">
+      <section className="relative pt-12 pb-16 px-5 overflow-hidden border-b border-line/40" aria-labelledby="hero-title">
         <div className="max-w-[52rem] mx-auto text-center">
           <div>
-            <p className="font-pixel text-[0.6rem] md:text-[0.65rem] text-gold tracking-widest uppercase mb-4 inline-flex items-center justify-center gap-2">
+            <p className="font-pixel text-[0.6rem] md:text-[0.65rem] text-ink-dim tracking-widest uppercase mb-4 inline-flex items-center justify-center gap-2">
               <span className="blink">●</span> INSERT COIN TO CONTINUE
             </p>
-            <h1 id="hero-title" className="font-pixel text-[clamp(2.1rem,8vw,4rem)] tracking-wide leading-tight text-ink">
-              DATA<br /><span className="text-cyan [text-shadow:0_0_24px_rgba(0,229,255,0.7)]">SLAYER</span>
+            <h1 id="hero-title" className="font-pixel text-[clamp(2.1rem,8vw,4rem)] tracking-wide leading-tight text-ink mb-4">
+              DATA<br /><span className="text-cyan text-outline-white">SLAYER 4.0</span>
             </h1>
-            <p className="font-pixel text-[0.65rem] md:text-[0.75rem] text-cyan tracking-widest mt-3 uppercase">EDISI KE-4.0</p>
             <p className="max-w-[42rem] mx-auto mt-5 text-ink-dim leading-relaxed text-sm md:text-base">
               Kompetisi data tahunan dari Himpunan Mahasiswa Sains Data (HMSD) Telkom University
               Purwokerto. Pilih jalur pertarunganmu: bangun model prediksi paling tajam lewat MLC,
@@ -78,15 +77,15 @@ export const HomePage: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3.5 mt-8">
               <a
                 href="#daftar"
-                className="inline-flex items-center justify-center rounded-xl px-7 py-3 font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                className="inline-flex items-center justify-center rounded-xl px-7 py-3 font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
               >
-                Mulai Misi
+                Daftar Kompetisi
               </a>
               <a
                 href="#kategori"
                 className="inline-flex items-center justify-center rounded-xl px-7 py-3 font-pixel text-xs border-2 border-line bg-panel/60 text-ink hover:border-cyan/50 hover:bg-cyan/10 hover:text-cyan hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
               >
-                Lihat Kategori
+                Eksplorasi Jalur Lomba
               </a>
             </div>
 
@@ -114,7 +113,7 @@ export const HomePage: React.FC = () => {
       <section id="about" className="py-20 px-5 text-center" aria-labelledby="about-title">
         <div className="max-w-[48rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan uppercase tracking-widest mb-2.5">Player Info</p>
-          <h2 id="about-title" className="font-pixel text-[clamp(1.35rem,4vw,2rem)] text-ink leading-snug">Tentang Data Slayer 4.0</h2>
+          <h2 id="about-title" className="text-[clamp(1.35rem,4vw,2rem)] text-ink leading-snug">Tentang Data Slayer 4.0</h2>
           <p className="mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
             Data Slayer merupakan kompetisi nasional di bidang ilmu data yang diselenggarakan oleh
             Himpunan Mahasiswa Sains Data (HMSD) Telkom University Purwokerto. Edisi ke-4.0 ini
@@ -126,7 +125,7 @@ export const HomePage: React.FC = () => {
             <p className="font-pixel text-[0.6rem] text-cyan mb-3 tracking-wider">Tema Kompetisi</p>
             <p className="text-ink-dim leading-relaxed text-sm">
               <strong className="text-ink font-semibold">Segera diumumkan.</strong> Tema resmi Data Slayer 4.0 akan diungkap bersamaan dengan
-              pembukaan gelombang pendaftaran — pantau terus Instagram panitia agar tidak ketinggalan.
+              pembukaan gelombang pendaftaran, pantau terus Instagram panitia agar tidak ketinggalan.
             </p>
             <span className="inline-flex items-center font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded mt-4">
               TEMA SEGERA DIUMUMKAN
@@ -136,86 +135,37 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Kategori */}
-      <section id="kategori" className="py-20 px-5 bg-gradient-to-b from-[#18215a]/70 via-[#12194a]/50 to-transparent border-y border-line/40 text-center" aria-labelledby="kategori-title">
-        <div className="max-w-[68rem] mx-auto">
-          <p className="font-pixel text-[0.6rem] text-cyan uppercase tracking-widest mb-2.5">Pilih Mode</p>
-          <h2 id="kategori-title" className="font-pixel text-[clamp(1.35rem,4vw,2rem)] text-ink leading-snug">Dua Jalur, Satu Medan Perang</h2>
-          <p className="mt-4 text-ink-dim leading-relaxed text-sm md:text-base max-w-[42rem] mx-auto">
-            Setiap kategori punya aturan main sendiri. Pilih sesuai kekuatan tim kamu — atau taklukkan keduanya.
-          </p>
+      <section id="kategori" className="py-20 px-5 border-y border-line/40 text-center" aria-labelledby="kategori-title">
+        <div className="max-w-[72rem] mx-auto text-center flex flex-col items-center">
+          {/* Are You Ready Typography */}
+          <div className="flex flex-col items-center mb-16 select-none cursor-default drop-shadow-sm">
+            <span className="font-pixel text-[clamp(2.5rem,6vw,4rem)] text-cyan text-outline-white leading-none">Are</span>
+            <span className="font-cursive text-[clamp(4.5rem,10vw,7.5rem)] text-gold text-outline-thin leading-[0.5] -my-1 md:-my-3 relative z-10 -rotate-2">You</span>
+            <span className="font-pixel text-[clamp(2.5rem,6vw,4rem)] text-cyan text-outline-white leading-none mt-2 md:mt-0">Ready?</span>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 text-left">
-            <article className="mode-card border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1.5 hover:border-cyan/50 hover:shadow-[0_20px_45px_-15px_rgba(0,229,255,0.25)]">
-              <div className="mode-card-head">
-                <span className="font-pixel text-[0.55rem] text-cyan tracking-wider">MODE 01</span>
-                <h3 className="font-pixel text-2xl text-cyan mt-2">MLC</h3>
-                <p className="text-xs text-ink-dim mt-1">Machine Learning Competition</p>
-              </div>
-              <p className="mt-4 text-ink-dim text-sm leading-relaxed flex-1">
-                Bangun model prediktif dari dataset kompetisi dan adu akurasi di papan skor.
-                Cocok buat kamu yang suka mengutak-atik algoritma sampai titik optimalnya.
-              </p>
-              <ul className="mt-6 space-y-3 list-none p-0 border-t border-dashed border-line/60 pt-4" aria-label="Spesifikasi MLC">
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Tipe</span>
-                  <strong className="text-ink font-semibold">Prediktif / Tabular</strong>
-                </li>
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Bahasa</span>
-                  <strong className="text-ink font-semibold">Python (bebas library)</strong>
-                </li>
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Tim</span>
-                  <strong className="text-ink font-semibold">1–3 orang / tim</strong>
-                </li>
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Guidebook</span>
-                  <span className="text-cyan font-semibold text-xs">Segera</span>
-                </li>
-              </ul>
-              <Link
-                to="/mlc"
-                className="mt-6 inline-flex items-center justify-center rounded-xl py-3 px-5 font-pixel text-xs border border-cyan/40 bg-cyan/5 text-cyan hover:bg-cyan hover:text-void transition-all duration-200"
-              >
-                Buka Mode MLC →
-              </Link>
-            </article>
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-32 mt-4 w-full max-w-[56rem]">
+            {/* MLC Card */}
+            <Link to="/mlc" className="glass-card aspect-square md:aspect-[4/3] flex flex-col items-center justify-center p-8 transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(110,120,160,0.25)] group relative overflow-hidden">
+               <div className="flex items-baseline justify-center select-none relative z-10">
+                 <span className="font-cursive text-5xl sm:text-7xl md:text-[8rem] text-cyan text-outline-thin leading-none">M</span>
+                 <span className="font-pixel text-xl sm:text-3xl md:text-5xl text-cyan text-outline-white tracking-widest ml-2">LC</span>
+               </div>
+               <span className="absolute bottom-4 md:bottom-6 font-body font-bold text-[0.55rem] sm:text-xs md:text-sm tracking-widest uppercase text-cyan text-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 Machine Learning
+               </span>
+            </Link>
 
-            <article className="mode-card border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1.5 hover:border-cyan/50 hover:shadow-[0_20px_45px_-15px_rgba(0,229,255,0.25)]">
-              <div className="mode-card-head">
-                <span className="font-pixel text-[0.55rem] text-cyan tracking-wider">MODE 02</span>
-                <h3 className="font-pixel text-2xl text-cyan mt-2">DAC</h3>
-                <p className="text-xs text-ink-dim mt-1">Dashboard Analytics Competition</p>
-              </div>
-              <p className="mt-4 text-ink-dim text-sm leading-relaxed flex-1">
-                Ubah data mentah menjadi wawasan bisnis yang bernilai lewat visualisasi interaktif.
-                Cocok buat kamu yang pandai bercerita lewat angka dan merancang dashboard berdampak.
-              </p>
-              <ul className="mt-6 space-y-3 list-none p-0 border-t border-dashed border-line/60 pt-4" aria-label="Spesifikasi DAC">
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Tipe</span>
-                  <strong className="text-ink font-semibold">BI Dashboard &amp; Analisis</strong>
-                </li>
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Tools</span>
-                  <strong className="text-ink font-semibold">Tableau / Power BI / Looker</strong>
-                </li>
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Tim</span>
-                  <strong className="text-ink font-semibold">1–3 orang / tim</strong>
-                </li>
-                <li className="flex justify-between items-baseline text-sm">
-                  <span className="text-ink-dim">Guidebook</span>
-                  <span className="text-cyan font-semibold text-xs">Segera</span>
-                </li>
-              </ul>
-              <Link
-                to="/dac"
-                className="mt-6 inline-flex items-center justify-center rounded-xl py-3 px-5 font-pixel text-xs border border-cyan/40 bg-cyan/5 text-cyan hover:bg-cyan hover:text-void transition-all duration-200"
-              >
-                Buka Mode DAC →
-              </Link>
-            </article>
+            {/* DAC Card */}
+            <Link to="/dac" className="glass-card aspect-square md:aspect-[4/3] flex flex-col items-center justify-center p-8 transition-all duration-300 hover:scale-105 hover:shadow-[0_15px_40px_rgba(110,120,160,0.25)] group relative overflow-hidden">
+               <div className="flex items-baseline justify-center select-none relative z-10">
+                 <span className="font-cursive text-5xl sm:text-7xl md:text-[8rem] text-cyan text-outline-thin leading-none">D</span>
+                 <span className="font-pixel text-xl sm:text-3xl md:text-5xl text-cyan text-outline-white tracking-widest ml-2">AC</span>
+               </div>
+               <span className="absolute bottom-4 md:bottom-6 font-body font-bold text-[0.55rem] sm:text-xs md:text-sm tracking-widest uppercase text-cyan text-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 Dashboard Analytics
+               </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -231,7 +181,7 @@ export const HomePage: React.FC = () => {
 
           <Link
             to="/event"
-            className="event-card border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm text-left block transition-all duration-200 hover:-translate-y-1.5 hover:border-cyan/50 hover:shadow-[0_20px_45px_-15px_rgba(0,229,255,0.2)] max-w-[42rem] mx-auto mt-8"
+            className="event-card border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm text-left block transition-all duration-200 hover:-translate-y-1.5 hover:border-cyan/50 hover:shadow-[0_20px_45px_-15px_rgba(255,255,255,0.2)] max-w-[42rem] mx-auto mt-8"
             aria-label="Buka halaman event Road to Data Slayer 4.0"
           >
             <div className="flex items-center gap-3">
@@ -273,11 +223,11 @@ export const HomePage: React.FC = () => {
                   <span className="font-pixel text-xs text-ink">TBA</span>
                 </li>
                 <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-[#c0c7d6] flex items-center gap-2">#2 Juara 2</span>
+                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#2 Juara 2</span>
                   <span className="font-pixel text-xs text-ink">TBA</span>
                 </li>
                 <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-[#cd7f32] flex items-center gap-2">#3 Juara 3</span>
+                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#3 Juara 3</span>
                   <span className="font-pixel text-xs text-ink">TBA</span>
                 </li>
               </ul>
@@ -290,11 +240,24 @@ export const HomePage: React.FC = () => {
                   <span className="font-pixel text-xs text-ink">TBA</span>
                 </li>
                 <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-[#c0c7d6] flex items-center gap-2">#2 Juara 2</span>
+                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#2 Juara 2</span>
                   <span className="font-pixel text-xs text-ink">TBA</span>
                 </li>
                 <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-[#cd7f32] flex items-center gap-2">#3 Juara 3</span>
+                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#3 Juara 3</span>
+                  <span className="font-pixel text-xs text-ink">TBA</span>
+                </li>
+                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-cyan/30">
+                  <span className="font-pixel text-xs text-cyan flex items-center gap-2.5">
+                    <svg
+                      className="w-5 h-5 text-cyan fill-current shrink-0 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    Juara Favorit
+                  </span>
                   <span className="font-pixel text-xs text-ink">TBA</span>
                 </li>
               </ul>
@@ -315,7 +278,7 @@ export const HomePage: React.FC = () => {
       {/* CTA */}
       <section id="daftar" className="py-20 px-5 text-center bg-gradient-to-b from-transparent via-panel/40 to-transparent" aria-labelledby="cta-title">
         <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(0,229,255,0.1)]">
+          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(255,255,255,0.1)]">
             PENDAFTARAN SEGERA DIBUKA
           </span>
           <h2 id="cta-title" className="font-pixel text-[clamp(1.35rem,4vw,2.1rem)] mt-5 text-ink">
@@ -333,12 +296,12 @@ export const HomePage: React.FC = () => {
               Registration <span className="font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2 py-0.5 rounded">SEGERA</span>
             </span>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg px-6 py-3 font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_25px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-lg px-6 py-3 font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
-              Info Instagram
+              Instagram Resmi
             </a>
           </div>
         </div>

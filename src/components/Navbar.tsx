@@ -17,14 +17,8 @@ export const Navbar: React.FC = () => {
   return (
     <header className={`site-header ${isOpen ? 'is-open' : ''}`} id="top">
       <div className="header-inner">
-        <Link to="/" className="logo" aria-label="Data Slayer 4.0 — Beranda" onClick={closeMenu}>
-          <span className="logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
-              <path d="M12 12v9M12 12L2 7M12 12l10-5" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
-            </svg>
-          </span>
-          <span>DATA<span className="text-cyan ml-1">SLAYER</span></span>
+        <Link to="/" className="logo" aria-label="Data Slayer 4.0: Beranda" onClick={closeMenu}>
+          <img src="/logo.png" alt="Data Slayer Logo" className="h-8 md:h-9 w-auto object-contain" />
         </Link>
 
         <nav className="main-nav" aria-label="Navigasi utama">
@@ -34,7 +28,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(0,229,255,0.35)] font-semibold'
+                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -46,7 +40,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(0,229,255,0.35)] font-semibold'
+                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -58,7 +52,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(0,229,255,0.35)] font-semibold'
+                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -70,7 +64,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(0,229,255,0.35)] font-semibold'
+                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -82,7 +76,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(0,229,255,0.35)] font-semibold'
+                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -93,7 +87,7 @@ export const Navbar: React.FC = () => {
 
         <a
           href="/#daftar"
-          className="hidden md:inline-flex items-center justify-center rounded-full px-6 py-2.5 font-body text-xs md:text-sm font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 shadow-[0_0_16px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap"
+          className="hidden md:inline-flex items-center justify-center rounded-full px-6 py-2.5 font-body text-xs md:text-sm font-bold text-ink bg-gradient-to-r from-panel-2 to-panel shadow-[0_0_16px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap"
         >
           Daftar Sekarang
         </a>
@@ -156,20 +150,9 @@ export const Navbar: React.FC = () => {
         >
           Event
         </NavLink>
-        <NavLink
-          to="/shorten"
-          onClick={closeMenu}
-          className={({ isActive }) =>
-            `p-3 rounded-xl transition-all duration-200 ${
-              isActive ? 'text-cyan bg-cyan/10 pl-5 font-semibold' : 'text-ink-dim hover:text-ink hover:bg-white/5'
-            }`
-          }
-        >
-          Shorten
-        </NavLink>
         <a
           href="/#daftar"
-          className="flex items-center justify-center rounded-xl mt-3 py-2.5 px-4 font-body text-sm font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 shadow-[0_0_14px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.7)] active:translate-y-0.5 transition-all duration-200 text-center"
+          className="flex items-center justify-center rounded-xl mt-3 py-2.5 px-4 font-body text-sm font-bold text-ink bg-gradient-to-r from-panel-2 to-panel shadow-[0_0_14px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] active:translate-y-0.5 transition-all duration-200 text-center"
           onClick={closeMenu}
         >
           Daftar Sekarang

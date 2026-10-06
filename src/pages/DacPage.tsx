@@ -81,13 +81,13 @@ const dacFaqItems: FaqItem[] = [
 export const DacPage: React.FC = () => {
   return (
     <>
-      <section className="pt-10 pb-14 px-5 bg-gradient-to-b from-transparent via-[#18215a]/45 to-transparent border-b border-line/40 text-center">
+      <section className="pt-10 pb-14 px-5 border-b border-line/40 text-center">
         <div className="max-w-[56rem] mx-auto">
-          <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
-            <span className="blink">●</span> MODE 02 — DAC
+          <p className="font-pixel text-[0.6rem] text-gold inline-flex items-center gap-2 mb-5 bg-gold/10 border border-gold/25 px-3.5 py-1.5 rounded-full">
+            <span className="blink">●</span> MODE 02: DAC
           </p>
-          <h1 className="font-pixel text-[clamp(1.6rem,5.5vw,2.75rem)] leading-tight text-ink [text-shadow:0_0_18px_rgba(0,229,255,0.4)]">
-            Dashboard Analytics<br />Competition
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold tracking-tight leading-tight text-ink">
+            Dashboard Analytics <span className="text-gold [text-shadow:0_0_20px_rgba(255,255,255,0.45)]">Competition</span>
           </h1>
           <p className="max-w-[40rem] mx-auto mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
             Rancang visualisasi data interaktif yang memukau dan mampu menyampaikan cerita di balik angka
@@ -97,13 +97,13 @@ export const DacPage: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-3.5 mt-7">
             <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
               Guidebook
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/30 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-gold bg-gold/15 border border-gold/30 px-2 py-0.5 rounded">
                 SEGERA
               </span>
             </span>
             <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
               Registration
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/30 px-2 py-0.5 rounded">
+              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-gold bg-gold/15 border border-gold/30 px-2 py-0.5 rounded">
                 SEGERA
               </span>
             </span>
@@ -116,8 +116,8 @@ export const DacPage: React.FC = () => {
       {/* Info DAC */}
       <section className="py-16 px-5" aria-labelledby="info-dac-title">
         <div className="max-w-[68rem] mx-auto">
-          <p className="font-pixel text-[0.6rem] text-cyan tracking-wider mb-2.5">Detail Misi</p>
-          <h2 id="info-dac-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] leading-snug">
+          <p className="font-pixel text-[0.6rem] text-gold tracking-wider mb-2.5">Detail Misi</p>
+          <h2 id="info-dac-title" className="text-[clamp(1.35rem,3.5vw,2rem)] font-bold text-ink leading-snug">
             Tentang Kompetisi DAC
           </h2>
           <p className="text-ink-dim mt-3 max-w-[46ch] leading-relaxed text-sm md:text-base">
@@ -125,7 +125,7 @@ export const DacPage: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(255,255,255,0.15)]">
               <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
                 Deskripsi Kompetisi
               </h3>
@@ -136,7 +136,7 @@ export const DacPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(255,255,255,0.15)]">
               <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
                 Format Pengerjaan
               </h3>
@@ -160,7 +160,7 @@ export const DacPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(255,255,255,0.15)]">
               <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
                 Bobot Penilaian
               </h3>
@@ -180,7 +180,7 @@ export const DacPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(0,229,255,0.15)]">
+            <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-[0_12px_30px_-10px_rgba(255,255,255,0.15)]">
               <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-cyan before:text-[0.65rem]">
                 Fasilitas Peserta
               </h3>
@@ -223,7 +223,7 @@ export const DacPage: React.FC = () => {
       {/* CTA */}
       <section className="py-16 px-5 text-center" aria-labelledby="cta-dac-title">
         <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(0,229,255,0.1)]">
+          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(255,255,255,0.1)]">
             PENDAFTARAN SEGERA DIBUKA
           </span>
           <h2 id="cta-dac-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] mt-5">
@@ -234,7 +234,7 @@ export const DacPage: React.FC = () => {
           </p>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
           >
             Kembali ke Beranda
           </Link>

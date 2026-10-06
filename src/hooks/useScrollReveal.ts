@@ -11,7 +11,7 @@ export function useScrollReveal() {
     // Tunggu render DOM selesai
     const timeout = setTimeout(() => {
       const elements = document.querySelectorAll<HTMLElement>(
-        '.mode-card, .level-stage, .prize-board, .faq-item, .info-card, .resource-link, .event-card, .theme-card, .hero-stat'
+        '.mode-card, .level-body, .prize-board, .faq-item, .info-card, .resource-link, .event-card, .theme-card, .hero-stat'
       );
 
       elements.forEach((el, index) => {

@@ -3,13 +3,13 @@ import React from 'react';
 export const EventPage: React.FC = () => {
   return (
     <>
-      <section className="pt-10 pb-14 px-5 bg-gradient-to-b from-transparent via-[#18215a]/45 to-transparent border-b border-line/40 text-center">
+      <section className="pt-10 pb-14 px-5 border-b border-line/40 text-center">
         <div className="max-w-[56rem] mx-auto">
           <p className="font-pixel text-[0.6rem] text-cyan inline-flex items-center gap-2 mb-5 bg-cyan/10 border border-cyan/25 px-3.5 py-1.5 rounded-full">
             <span className="blink">●</span> SIDE QUEST
           </p>
-          <h1 className="font-pixel text-[clamp(1.6rem,5.5vw,2.75rem)] leading-tight text-ink [text-shadow:0_0_18px_rgba(0,229,255,0.4)]">
-            Road to<br />Data Slayer 4.0
+          <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold tracking-tight leading-tight text-ink">
+            Road to <span className="text-cyan [text-shadow:0_0_20px_rgba(255,255,255,0.45)]">Data Slayer 4.0</span>
           </h1>
           <p className="max-w-[40rem] mx-auto mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
             Rangkaian webinar pemanasan sebelum kompetisi utama dimulai. Detail jadwal dan
@@ -21,7 +21,7 @@ export const EventPage: React.FC = () => {
       <section className="py-16 px-5" aria-labelledby="event-detail-title">
         <div className="max-w-[68rem] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-[17rem_1fr] gap-8 md:gap-12 items-start">
-            <div className="aspect-[4/5] border-2 border-line rounded-2xl bg-gradient-to-b from-[#1c2668] to-[#12194a] flex flex-col items-center justify-center gap-3.5 text-center p-8 shadow-md">
+            <div className="aspect-[4/5] border-2 border-line rounded-2xl bg-gradient-to-b from-panel-2 to-panel flex flex-col items-center justify-center gap-3.5 text-center p-8 shadow-md">
               <svg className="pixel-icon text-cyan opacity-85" width="56" height="56" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0" y="2" width="8" height="5" fill="currentColor"/>
                 <rect x="2" y="1" width="2" height="1" fill="currentColor"/>
@@ -32,7 +32,7 @@ export const EventPage: React.FC = () => {
 
             <div>
               <p className="font-pixel text-[0.6rem] text-cyan tracking-wider mb-2.5">Webinar</p>
-              <h2 id="event-detail-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] leading-snug">
+              <h2 id="event-detail-title" className="text-[clamp(1.35rem,3.5vw,2rem)] font-bold text-ink leading-snug">
                 Webinar: Road to Data Slayer 4.0
               </h2>
               <p className="text-ink-dim mt-3 max-w-[46ch] leading-relaxed text-sm md:text-base">
@@ -41,7 +41,7 @@ export const EventPage: React.FC = () => {
                 diumumkan lebih lanjut.
               </p>
 
-              <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(0,229,255,0.1)] mt-6">
+              <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(255,255,255,0.1)] mt-6">
                 JADWAL SEGERA DIUMUMKAN
               </span>
 
@@ -112,19 +112,19 @@ export const EventPage: React.FC = () => {
 
       <section className="py-16 px-5 text-center bg-gradient-to-b from-transparent via-panel/50 to-transparent" aria-labelledby="cta-event-title">
         <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <h2 id="cta-event-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)]">
+          <h2 id="cta-event-title" className="text-[clamp(1.35rem,3.5vw,2rem)] font-bold text-ink">
             Jangan Sampai Terlewat
           </h2>
           <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
             Ikuti Instagram panitia untuk info tanggal, pembicara, dan link pendaftaran webinar.
           </p>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-[#00b4d8] shadow-[0_0_15px_rgba(0,229,255,0.4)] hover:shadow-[0_0_24px_rgba(0,229,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
           >
-            Ikuti Info Terbaru
+            Buka Instagram Resmi
           </a>
         </div>
       </section>

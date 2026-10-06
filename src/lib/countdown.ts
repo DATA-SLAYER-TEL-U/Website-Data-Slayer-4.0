@@ -25,7 +25,7 @@ export function initCountdown(): void {
     const minsEl = panel.querySelector<HTMLElement>('[data-cd="mins"]');
     const secsEl = panel.querySelector<HTMLElement>('[data-cd="secs"]');
 
-    // Tanggal belum final (TBA) — tampilkan strip statis, jangan jalankan timer.
+    // Tanggal belum final (TBA): tampilkan strip statis, jangan jalankan timer.
     if (Number.isNaN(target)) {
       [daysEl, hoursEl, minsEl, secsEl].forEach((el) => {
         if (el) el.textContent = '--';

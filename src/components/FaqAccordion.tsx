@@ -39,18 +39,23 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
               <div key={idx} className="faq-item">
                 <button
                   type="button"
+                  id={`${id}-btn-${idx}`}
                   className="faq-question"
                   aria-expanded={isOpen}
+                  aria-controls={`${id}-panel-${idx}`}
                   onClick={() => toggle(idx)}
                 >
                   <span>{item.question}</span>
                   <span className="faq-icon" aria-hidden="true">+</span>
                 </button>
-                {isOpen && (
-                  <div className="faq-answer">
-                    <p>{item.answer}</p>
-                  </div>
-                )}
+                <div
+                  id={`${id}-panel-${idx}`}
+                  role="region"
+                  aria-labelledby={`${id}-btn-${idx}`}
+                  className="faq-answer"
+                >
+                  <p>{item.answer}</p>
+                </div>
               </div>
             );
           })}
