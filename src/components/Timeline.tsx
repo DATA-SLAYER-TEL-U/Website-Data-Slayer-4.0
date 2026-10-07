@@ -68,7 +68,6 @@ export const Timeline: React.FC<TimelineProps> = ({
       observer.observe(containerRef.current);
     }
     window.addEventListener('resize', updatePath);
-    window.addEventListener('scroll', updatePath, { passive: true });
 
     return () => {
       cancelAnimationFrame(rafId);
@@ -77,7 +76,6 @@ export const Timeline: React.FC<TimelineProps> = ({
       clearTimeout(t3);
       observer.disconnect();
       window.removeEventListener('resize', updatePath);
-      window.removeEventListener('scroll', updatePath);
     };
   }, [stages]);
 
