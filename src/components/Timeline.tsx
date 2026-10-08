@@ -80,7 +80,7 @@ export const Timeline: React.FC<TimelineProps> = ({
   }, [stages]);
 
   return (
-    <section id="timeline" className="section section--alt" aria-labelledby="timeline-title">
+    <section id="timeline" className="section section--alt overflow-hidden" aria-labelledby="timeline-title">
       <div className="section-inner">
         <p className="section-eyebrow">{eyebrow}</p>
         <h2 id="timeline-title" className="section-title">{title}</h2>

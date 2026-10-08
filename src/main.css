@@ -38,6 +38,7 @@
   }
 
   body {
+    overflow-x: hidden;
     background-color: #fdfcff;
     color: var(--color-ink);
     font-family: var(--font-body);
@@ -158,20 +159,7 @@
       0 0 24px -3px rgba(255, 255, 255, 0.25);
   }
 
-  /* Morphing island when mobile nav is opened */
-  .site-header:has(#navToggle[aria-expanded="true"]),
-  .site-header.is-open {
-    width: calc(100% - 2rem);
-    max-width: 28rem;
-    border-radius: 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(28px) saturate(200%);
-    -webkit-backdrop-filter: blur(28px) saturate(200%);
-    box-shadow:
-      0 20px 50px -10px rgba(110, 120, 160, 0.25),
-      inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
-      0 0 30px -5px rgba(255, 255, 255, 0.2);
-  }
+  /* Removed Morphing island effect to keep pill shape consistent */
 
   .header-inner {
     padding: 0.6rem 0.75rem 0.6rem 1.4rem;
@@ -306,19 +294,38 @@
   }
 
   .mobile-nav {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px -10px rgba(110, 120, 160, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
-    padding: 0.5rem 1.25rem 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    animation: mobileNavFade 0.25s ease forwards;
+    padding: 1rem 1.25rem 1.25rem;
+    animation: mobileNavPopDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: top center;
   }
   .mobile-nav a {
     padding: 0.75rem 1rem;
     border-radius: 0.75rem;
     color: var(--color-ink-dim);
     transition: all 0.2s ease;
+    opacity: 0;
+    animation: mobileLinkSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
+  
+  .mobile-nav a:nth-child(1) { animation-delay: 0.05s; }
+  .mobile-nav a:nth-child(2) { animation-delay: 0.1s; }
+  .mobile-nav a:nth-child(3) { animation-delay: 0.15s; }
+  .mobile-nav a:nth-child(4) { animation-delay: 0.2s; }
+  .mobile-nav a:nth-child(5) { animation-delay: 0.25s; }
+
   .mobile-nav a:hover,
   .mobile-nav a.is-active {
     color: var(--color-cyan);
@@ -342,15 +349,20 @@
     }
   }
 
-  @keyframes mobileNavFade {
-    from {
+  @keyframes mobileNavPopDown {
+    0% {
       opacity: 0;
-      transform: translateY(-8px);
+      transform: scaleY(0.8) translateY(-10px);
     }
-    to {
+    100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: scaleY(1) translateY(0);
     }
+  }
+
+  @keyframes mobileLinkSlide {
+    0% { opacity: 0; transform: translateX(-15px); }
+    100% { opacity: 1; transform: translateX(0); }
   }
 
   /* ---------- Buttons ---------- */
