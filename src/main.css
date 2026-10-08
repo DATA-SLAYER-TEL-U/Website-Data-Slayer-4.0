@@ -1595,3 +1595,8 @@
     border-radius: 1rem;
   }
 }
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: 100%; }
+}

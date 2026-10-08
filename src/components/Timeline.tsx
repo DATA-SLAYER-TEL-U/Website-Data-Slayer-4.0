@@ -86,7 +86,18 @@ export const Timeline: React.FC<TimelineProps> = ({
         <h2 id="timeline-title" className="section-title">{title}</h2>
         {lead && <p className="section-lead">{lead}</p>}
 
-        <div ref={containerRef} className="level-track-container">
+        <div ref={containerRef} className="level-track-container relative">
+          {/* Decorative Clouds */}
+          <div className="absolute top-12 -left-12 md:-left-32 w-32 md:w-64 opacity-60 pointer-events-none z-0 hover:scale-105 transition-transform duration-700">
+            <img src="/awan.webp" alt="" className="w-full h-auto drop-shadow-lg" />
+          </div>
+          <div className="absolute top-1/2 -right-10 md:-right-36 w-28 md:w-56 opacity-50 pointer-events-none z-0 hover:scale-105 transition-transform duration-700">
+            <img src="/awan.webp" alt="" className="w-full h-auto scale-x-[-1] drop-shadow-lg" />
+          </div>
+          <div className="absolute bottom-16 -left-8 md:-left-24 w-36 md:w-72 opacity-70 pointer-events-none z-0 hover:scale-105 transition-transform duration-700">
+            <img src="/awan.webp" alt="" className="w-full h-auto drop-shadow-lg" />
+          </div>
+
           {pathD && (
             <svg
               className="absolute inset-0 pointer-events-none w-full h-full hidden md:block overflow-visible"

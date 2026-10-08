@@ -61,13 +61,32 @@ export const HomePage: React.FC = () => {
     <>
       {/* Hero */}
       <section className="relative pt-12 pb-16 px-5 overflow-hidden border-b border-line/40" aria-labelledby="hero-title">
-        <div className="max-w-[52rem] mx-auto text-center">
+        
+        {/* Awan Background */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-100"
+          style={{ 
+            backgroundImage: "url('/awan.webp')", 
+            backgroundSize: "contain", 
+            backgroundPosition: "top center", 
+            backgroundRepeat: "no-repeat" 
+          }}
+        />
+
+        <div className="relative z-10 max-w-[52rem] mx-auto text-center">
           <div>
             <p className="font-pixel text-[0.6rem] md:text-[0.65rem] text-ink-dim tracking-widest uppercase mb-4 inline-flex items-center justify-center gap-2">
               <span className="blink">●</span> INSERT COIN TO CONTINUE
             </p>
-            <h1 id="hero-title" className="font-pixel text-[clamp(2.1rem,8vw,4rem)] tracking-wide leading-tight text-ink mb-4">
-              DATA<br /><span className="text-cyan text-outline-white">SLAYER 4.0</span>
+            <h1 id="hero-title" className="tracking-wide leading-tight mb-4 flex flex-col items-center">
+              <div className="flex items-baseline justify-center">
+                <span className="font-cursive text-[clamp(4.5rem,12vw,6.5rem)] text-ink text-outline-thin leading-none -mr-1">D</span>
+                <span className="font-pixel text-[clamp(2.1rem,8vw,4rem)] text-ink">ATA</span>
+              </div>
+              <div className="flex items-baseline justify-center -mt-3 md:-mt-5">
+                <span className="font-cursive text-[clamp(4.5rem,12vw,6.5rem)] text-cyan text-outline-thin leading-none -mr-1">S</span>
+                <span className="font-pixel text-[clamp(2.1rem,8vw,4rem)] text-cyan text-outline-white">LAYER 4.0</span>
+              </div>
             </h1>
             <p className="max-w-[42rem] mx-auto mt-5 text-ink-dim leading-relaxed text-sm md:text-base">
               Kompetisi data tahunan dari Himpunan Mahasiswa Sains Data (HMSD) Telkom University
@@ -135,12 +154,24 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Kategori */}
-      <section id="kategori" className="py-20 px-5 border-y border-line/40 text-center" aria-labelledby="kategori-title">
-        <div className="max-w-[72rem] mx-auto text-center flex flex-col items-center">
+      <section id="kategori" className="relative py-20 px-5 border-y border-line/40 text-center overflow-hidden" aria-labelledby="kategori-title">
+        
+        {/* Arcade Background */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-50"
+          style={{ 
+            backgroundImage: "url('/double-arcade.webp')", 
+            backgroundSize: "contain", 
+            backgroundPosition: "center", 
+            backgroundRepeat: "no-repeat" 
+          }}
+        />
+
+        <div className="relative z-10 max-w-[72rem] mx-auto text-center flex flex-col items-center">
           {/* Are You Ready Typography */}
           <div className="flex flex-col items-center mb-16 select-none cursor-default drop-shadow-sm">
             <span className="font-pixel text-[clamp(2.5rem,6vw,4rem)] text-cyan text-outline-white leading-none">Are</span>
-            <span className="font-cursive text-[clamp(4.5rem,10vw,7.5rem)] text-gold text-outline-thin leading-[0.5] -my-1 md:-my-3 relative z-10 -rotate-2">You</span>
+            <span className="font-cursive text-[clamp(4.5rem,10vw,7.5rem)] text-gold text-outline-thin drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] leading-[0.5] -my-1 md:-my-3 relative z-10 -rotate-2">You</span>
             <span className="font-pixel text-[clamp(2.5rem,6vw,4rem)] text-cyan text-outline-white leading-none mt-2 md:mt-0">Ready?</span>
           </div>
 

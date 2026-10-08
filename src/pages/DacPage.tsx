@@ -81,8 +81,31 @@ const dacFaqItems: FaqItem[] = [
 export const DacPage: React.FC = () => {
   return (
     <>
-      <section className="pt-10 pb-14 px-5 border-b border-line/40 text-center">
-        <div className="max-w-[56rem] mx-auto">
+      <section className="min-h-screen flex flex-col items-center justify-center pt-24 pb-40 px-5 border-b border-line/40 text-center relative overflow-hidden">
+        
+        {/* Awan Background */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-100"
+          style={{ 
+            backgroundImage: "url('/awan.webp')", 
+            backgroundSize: "contain", 
+            backgroundPosition: "top center", 
+            backgroundRepeat: "no-repeat" 
+          }}
+        />
+
+        {/* Arcade Background */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none opacity-40"
+          style={{ 
+            backgroundImage: "url('/arcade.webp')", 
+            backgroundSize: "contain", 
+            backgroundPosition: "center", 
+            backgroundRepeat: "no-repeat" 
+          }}
+        />
+
+        <div className="relative z-10 max-w-[56rem] w-full -translate-y-12 md:-translate-y-20">
           <p className="font-pixel text-[0.6rem] text-gold inline-flex items-center gap-2 mb-5 bg-gold/10 border border-gold/25 px-3.5 py-1.5 rounded-full">
             <span className="blink">●</span> MODE 02: DAC
           </p>
