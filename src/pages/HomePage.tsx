@@ -7,33 +7,39 @@ import { FaqAccordion, type FaqItem } from '../components/FaqAccordion';
 const homeTimelineStages: TimelineStage[] = [
   {
     num: '01',
-    title: 'Pendaftaran & Pengumpulan Tim',
-    desc: 'Isi formulir pendaftaran, pilih kategori, dan lengkapi data tim.',
-    time: 'TBA',
+    title: 'Registrasi Peserta (Batch 1 & 2)',
+    desc: 'Pembukaan pendaftaran peserta gelombang 1 dan gelombang 2 untuk kategori MLC dan DAC.',
+    time: '19 Oktober - 15 November 2026',
   },
   {
     num: '02',
-    title: 'Seleksi Berkas',
-    desc: 'Panitia menilai kelengkapan berkas dan proposal awal pendekatan tim.',
-    time: 'TBA',
+    title: 'Babak Penyisihan & Pengerjaan Karya',
+    desc: 'Peserta mengerjakan tantangan dataset MLC dan penyusunan dashboard analitik DAC.',
+    time: '19 Oktober - 29 November 2026',
   },
   {
     num: '03',
-    title: 'Technical Round',
-    desc: 'MLC mengerjakan dataset kompetisi; DAC menyusun analisis studi kasus.',
-    time: 'TBA',
+    title: 'Webinar DAC',
+    desc: 'Sesi webinar eksklusif Data Analytics bersama narasumber ahli.',
+    time: '27 November 2026',
   },
   {
     num: '04',
-    title: 'Grand Final',
-    desc: 'Tim terbaik dari tiap kategori presentasi langsung di hadapan juri.',
-    time: 'TBA',
+    title: 'Pengumuman Finalis',
+    desc: 'Pengumuman 10 besar finalis DAC (30 November) dan finalis MLC (7 Desember).',
+    time: '30 November & 7 Desember 2026',
   },
   {
     num: '05',
-    title: 'Awarding Night',
-    desc: 'Pengumuman pemenang, penyerahan hadiah, dan penutupan Data Slayer 4.0.',
-    time: 'TBA',
+    title: 'Technical Meeting Final',
+    desc: 'Pengarahan teknis bersama seluruh finalis MLC dan DAC menjelang babak presentasi.',
+    time: '12 Desember 2026',
+  },
+  {
+    num: '06',
+    title: 'Babak Grand Final & Awarding',
+    desc: 'Presentasi karya langsung di hadapan dewan juri, penentuan juara, dan penutupan acara.',
+    time: '19 Desember 2026',
   },
 ];
 
@@ -124,7 +130,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <Countdown targetDate="" />
+          <Countdown />
         </div>
       </section>
 
@@ -234,7 +240,7 @@ export const HomePage: React.FC = () => {
       <Timeline
         eyebrow="Progres Level"
         title="Timeline Kompetisi"
-        lead="Lima level yang harus dilewati dari pendaftaran sampai penobatan juara. Tanggal detail menyusul di halaman masing-masing kategori."
+        lead="Tahapan hari besar Data Slayer 4.0 dari pendaftaran hingga babak grand final. Detail lengkap per kategori dapat dilihat di halaman masing-masing."
         stages={homeTimelineStages}
       />
 

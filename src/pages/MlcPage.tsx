@@ -7,45 +7,51 @@ import { FaqAccordion, type FaqItem } from '../components/FaqAccordion';
 const mlcTimelineStages: TimelineStage[] = [
   {
     num: '01',
-    title: 'Registrasi Batch 1',
-    desc: 'Pendaftaran gelombang pertama dibuka.',
-    time: 'TBA',
+    title: 'Registrasi Batch 1 MLC',
+    desc: 'Pembukaan pendaftaran gelombang pertama kompetisi Machine Learning Competition.',
+    time: '19 Oktober - 8 November 2026',
   },
   {
     num: '02',
-    title: 'Registrasi Batch 2',
-    desc: 'Gelombang kedua untuk yang belum sempat daftar.',
-    time: 'TBA',
+    title: 'Registrasi Batch 2 MLC',
+    desc: 'Pendaftaran gelombang kedua bagi tim yang belum sempat mendaftar.',
+    time: '9 November - 15 November 2026',
   },
   {
     num: '03',
-    title: 'Babak Penyisihan',
-    desc: 'Peserta mengerjakan dataset kompetisi.',
-    time: 'TBA',
+    title: 'Babak Penyisihan MLC',
+    desc: 'Peserta mengerjakan tantangan pemodelan dataset Machine Learning secara daring.',
+    time: '16 November - 29 November 2026',
   },
   {
     num: '04',
-    title: 'Pengumuman Finalis',
-    desc: 'Tim dengan skor terbaik melaju ke babak final.',
-    time: 'TBA',
+    title: 'Penilaian MLC',
+    desc: 'Evaluasi performa model, kode solusi, dan metrik akurasi oleh dewan juri.',
+    time: '30 November - 6 Desember 2026',
   },
   {
     num: '05',
-    title: 'Technical Meeting',
-    desc: 'Briefing teknis untuk seluruh finalis.',
-    time: 'TBA',
+    title: 'Pengumuman Finalis MLC',
+    desc: 'Pengumuman resmi tim-tim dengan peringkat tertinggi yang lolos ke babak final.',
+    time: '7 Desember 2026',
   },
   {
     num: '06',
-    title: 'Pengumpulan Presentasi',
-    desc: 'Finalis menyusun materi presentasi solusi.',
-    time: 'TBA',
+    title: 'TM Final MLC',
+    desc: 'Technical Meeting pengarahan teknis pelaksanaan babak final bagi seluruh finalis.',
+    time: '12 Desember 2026',
   },
   {
     num: '07',
-    title: 'Babak Final',
-    desc: 'Presentasi langsung di hadapan dewan juri.',
-    time: 'TBA',
+    title: 'Pembuatan & Pengumpulan File Presentasi',
+    desc: 'Finalis menyiapkan slide materi dan mengunggah berkas presentasi akhir.',
+    time: '13 - 17 Desember 2026',
+  },
+  {
+    num: '08',
+    title: 'Babak Final MLC',
+    desc: 'Presentasi langsung solusi dan tanya jawab teknis di hadapan dewan juri.',
+    time: '19 Desember 2026',
   },
 ];
 
@@ -126,7 +132,7 @@ export const MlcPage: React.FC = () => {
             </span>
           </div>
 
-          <Countdown targetDate="" />
+          <Countdown />
         </div>
       </section>
 
@@ -224,7 +230,7 @@ export const MlcPage: React.FC = () => {
       <Timeline
         eyebrow="Progres Level"
         title="Timeline MLC"
-        lead="Tanggal pasti akan diumumkan bersama pembukaan pendaftaran."
+        lead="Jadwal resmi tahapan Machine Learning Competition dari pembukaan pendaftaran hingga babak final."
         stages={mlcTimelineStages}
       />
 

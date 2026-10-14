@@ -7,51 +7,69 @@ import { FaqAccordion, type FaqItem } from '../components/FaqAccordion';
 const dacTimelineStages: TimelineStage[] = [
   {
     num: '01',
-    title: 'Registrasi Batch 1',
-    desc: 'Pendaftaran gelombang pertama dibuka.',
-    time: 'TBA',
+    title: 'Registrasi Batch 1 DAC',
+    desc: 'Pembukaan pendaftaran gelombang pertama kompetisi Data Analytics Competition.',
+    time: '19 Oktober - 8 November 2026',
   },
   {
     num: '02',
-    title: 'Registrasi Batch 2',
-    desc: 'Gelombang kedua untuk yang belum sempat daftar.',
-    time: 'TBA',
+    title: 'Registrasi Batch 2 DAC',
+    desc: 'Pendaftaran gelombang kedua bagi tim yang belum sempat mendaftar.',
+    time: '9 November - 15 November 2026',
   },
   {
     num: '03',
-    title: 'Penyisihan Dashboard',
-    desc: 'Peserta menyusun dan mengumpulkan dashboard.',
-    time: 'TBA',
+    title: 'Pembuatan Dashboard DAC',
+    desc: 'Peserta merancang dan membangun visualisasi dashboard analisis data interaktif.',
+    time: '19 Oktober - 23 November 2026',
   },
   {
     num: '04',
-    title: 'Pengumuman Finalis',
-    desc: 'Sepuluh dashboard terbaik melaju ke babak final.',
-    time: 'TBA',
+    title: 'Penilaian Dashboard DAC (10 Besar)',
+    desc: 'Evaluasi dewan juri terhadap dashboard peserta untuk menentukan 10 tim finalis.',
+    time: '23 - 29 November 2026',
   },
   {
     num: '05',
-    title: 'Technical Meeting',
-    desc: 'Briefing teknis untuk seluruh finalis.',
-    time: 'TBA',
+    title: 'Webinar DAC',
+    desc: 'Sesi webinar eksklusif seputar Data Analytics bagi peserta dan umum.',
+    time: '27 November 2026',
   },
   {
     num: '06',
-    title: 'Pengumpulan Paper',
-    desc: 'Finalis menyusun laporan analisis pendukung.',
-    time: 'TBA',
+    title: 'Pengumuman Finalis DAC',
+    desc: 'Pengumuman resmi 10 tim finalis terbaik yang lolos ke babak berikutnya.',
+    time: '30 November 2026',
   },
   {
     num: '07',
-    title: 'Vote Juara Favorit',
-    desc: 'Publik memilih dashboard favorit mereka.',
-    time: 'TBA',
+    title: 'Voting Juara Favorit',
+    desc: 'Periode pemungutan suara publik secara terbuka untuk memilih Juara Favorit.',
+    time: '1 - 6 Desember 2026',
   },
   {
     num: '08',
-    title: 'Babak Final',
-    desc: 'Presentasi langsung di hadapan dewan juri.',
-    time: 'TBA',
+    title: 'Pembuatan dan Pengumpulan Paper',
+    desc: 'Penyusunan laporan analisis pendukung karya dan pengumpulan paper oleh finalis.',
+    time: '1 - 7 Desember 2026',
+  },
+  {
+    num: '09',
+    title: 'TM Final DAC',
+    desc: 'Technical Meeting pengarahan teknis pelaksanaan babak final bagi seluruh finalis.',
+    time: '12 Desember 2026',
+  },
+  {
+    num: '10',
+    title: 'Pembuatan PPT & Pengumpulan File Presentasi',
+    desc: 'Finalis menyiapkan slide materi dan mengunggah berkas presentasi akhir.',
+    time: '13 - 17 Desember 2026',
+  },
+  {
+    num: '11',
+    title: 'Babak Final DAC',
+    desc: 'Presentasi langsung karya di hadapan dewan juri dan penentuan pemenang.',
+    time: '19 Desember 2026',
   },
 ];
 
@@ -132,7 +150,7 @@ export const DacPage: React.FC = () => {
             </span>
           </div>
 
-          <Countdown targetDate="" />
+          <Countdown />
         </div>
       </section>
 
@@ -230,7 +248,7 @@ export const DacPage: React.FC = () => {
       <Timeline
         eyebrow="Progres Level"
         title="Timeline DAC"
-        lead="Tanggal pasti akan diumumkan bersama pembukaan pendaftaran."
+        lead="Jadwal resmi tahapan Data Analytics Competition dari pembukaan pendaftaran hingga babak final."
         stages={dacTimelineStages}
       />
 
