@@ -40,7 +40,7 @@ async function fakeShorten(longUrl: string, shortCode: string): Promise<ShortenR
   demoStore.set(shortCode, longUrl);
 
   return {
-    shortUrl: `https://data-slayer.id/${shortCode}`,
+    shortUrl: `https://data-slayer.com/${shortCode}`,
     longUrl,
   };
 }
