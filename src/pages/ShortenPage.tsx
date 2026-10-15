@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-const demoStore = new Map<string, string>();
-
 function isValidUrl(value: string): boolean {
   try {
     const url = new URL(value);
@@ -41,16 +39,29 @@ export const ShortenPage: React.FC = () => {
     setLoading(true);
 
     try {
-      // Simulasi delay pengerjaan
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      const apiEndpoint =
+        window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+          ? 'https://data-slayer.com/api/shorten'
+          : '/api/shorten';
 
-      if (demoStore.has(trimmedCode)) {
-        throw new Error('Kode ini sudah dipakai. Coba kode lain.');
+      const res = await fetch(apiEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          longUrl: trimmedUrl,
+          shortCode: trimmedCode,
+        }),
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        throw new Error(data?.error || 'Gagal membuat link.');
       }
-      demoStore.set(trimmedCode, trimmedUrl);
 
-      const generated = `https://data-slayer.id/${trimmedCode}`;
-      setResult(generated);
+      setResult(data?.shortUrl || `https://data-slayer.com/${trimmedCode}`);
       setLongUrl('');
       setShortCode('');
     } catch (err) {
@@ -106,7 +117,7 @@ export const ShortenPage: React.FC = () => {
                 </label>
                 <div className="flex items-center border border-line rounded-xl overflow-hidden focus-within:border-cyan focus-within:ring-1 focus-within:ring-cyan/40 transition-all bg-void/80">
                   <span className="px-3.5 py-3 font-pixel text-[0.6rem] text-ink-dim bg-white/5 border-r border-line shrink-0 select-none">
-                    data-slayer.id/
+                    data-slayer.com/
                   </span>
                   <input
                     id="shortCode"
@@ -187,8 +198,7 @@ export const ShortenPage: React.FC = () => {
             )}
 
             <p className="mt-6 text-xs text-ink-dim leading-relaxed">
-              Mode demo: link belum tersimpan permanen. Setelah backend resmi Data Slayer 4.0 siap,
-              tool ini akan tersambung otomatis ke server pemendek link sungguhan.
+              Link tersimpan permanen di cloud Data Slayer. Siap dibagikan ke poster, bio sosial media, atau grup peserta.
             </p>
           </div>
         </div>
