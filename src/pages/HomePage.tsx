@@ -50,7 +50,7 @@ const homeFaqItems: FaqItem[] = [
   },
   {
     question: 'Apakah peserta harus dari satu kampus yang sama?',
-    answer: 'Ya, seluruh anggota dalam satu tim harus berasal dari perguruan tinggi yang sama dan berstatus mahasiswa aktif (D3/D4/S1).',
+    answer: 'Peserta bebas membentuk tim dengan anggota dari berbagai universitas atau institusi yang berbeda'
   },
   {
     question: 'Apakah ada biaya pendaftaran?',
@@ -89,9 +89,9 @@ export const HomePage: React.FC = () => {
                 <span className="font-cursive text-[clamp(4.5rem,12vw,6.5rem)] text-ink text-outline-thin leading-none -mr-1">D</span>
                 <span className="font-pixel text-[clamp(2.1rem,8vw,4rem)] text-ink">ATA</span>
               </div>
-              <div className="flex items-baseline justify-center -mt-3 md:-mt-5">
-                <span className="font-cursive text-[clamp(4.5rem,12vw,6.5rem)] text-cyan text-outline-thin leading-none -mr-1">S</span>
-                <span className="font-pixel text-[clamp(2.1rem,8vw,4rem)] text-cyan text-outline-white">LAYER 4.0</span>
+              <div className="flex items-baseline justify-center whitespace-nowrap -mt-3 md:-mt-5">
+                  <span className="font-cursive text-[clamp(4rem,16vw,6.5rem)] text-cyan text-outline-thin leading-none -mr-1">S</span>
+                  <span className="font-pixel text-[clamp(1.5rem,7vw,4rem)] text-cyan text-outline-white">LAYER 4.0</span>
               </div>
             </h1>
             <p className="max-w-[42rem] mx-auto mt-5 text-ink-dim leading-relaxed text-sm md:text-base">
