@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '../lib/supabase';
 
 function isValidUrl(value: string): boolean {
   try {
@@ -39,29 +40,34 @@ export const ShortenPage: React.FC = () => {
     setLoading(true);
 
     try {
-      const apiEndpoint =
-        window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-          ? 'https://data-slayer.com/api/shorten'
-          : '/api/shorten';
+      // 1. Cek apakah kode sudah digunakan
+      const { data: existing, error: checkError } = await supabase
+        .from('short_links')
+        .select('code')
+        .eq('code', trimmedCode)
+        .maybeSingle();
 
-      const res = await fetch(apiEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          longUrl: trimmedUrl,
-          shortCode: trimmedCode,
-        }),
-      });
-
-      const data = await res.json().catch(() => null);
-
-      if (!res.ok) {
-        throw new Error(data?.error || 'Gagal membuat link.');
+      if (checkError) {
+        throw new Error('Gagal memeriksa kode: ' + checkError.message);
       }
 
-      setResult(data?.shortUrl || `https://data-slayer.com/${trimmedCode}`);
+      if (existing) {
+        throw new Error('Kode ini sudah dipakai. Coba kode lain.');
+      }
+
+      // 2. Simpan link ke Supabase
+      const { error: insertError } = await supabase
+        .from('short_links')
+        .insert({
+          code: trimmedCode,
+          long_url: trimmedUrl,
+        });
+
+      if (insertError) {
+        throw new Error(insertError.message || 'Gagal membuat link.');
+      }
+
+      setResult(`https://data-slayer.com/${trimmedCode}`);
       setLongUrl('');
       setShortCode('');
     } catch (err) {

@@ -6,6 +6,7 @@ import { MlcPage } from './pages/MlcPage';
 import { DacPage } from './pages/DacPage';
 import { EventPage } from './pages/EventPage';
 import { ShortenPage } from './pages/ShortenPage';
+import { RedirectPage } from './pages/RedirectPage';
 
 export const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ export const App: React.FC = () => {
           <Route path="dac" element={<DacPage />} />
           <Route path="event" element={<EventPage />} />
           <Route path="shorten" element={<ShortenPage />} />
+          <Route path=":code" element={<RedirectPage />} />
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
