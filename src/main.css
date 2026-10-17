@@ -10,6 +10,8 @@
   --color-cyan: #79aee5;
   --color-gold: #f5d17a;
   --color-magenta: #e8a2d3;
+  --color-mlc: #cda4de;
+  --color-dac: #ffb6c1;
 
   --font-pixel: "Press Start 2P", monospace;
   --font-body: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
@@ -885,10 +887,23 @@
     font-size: 0.7rem;
     color: var(--color-cyan);
     font-family: var(--font-pixel);
-    background: rgba(255, 255, 255, 0.08);
-    padding: 0.25rem 0.55rem;
-    border-radius: 0.35rem;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+
+  .level-track--mlc .level-body time {
+    color: var(--color-mlc);
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .level-track--dac .level-body time {
+    color: var(--color-dac);
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 
   /* Mobile responsiveness (< 768px) */
@@ -936,8 +951,8 @@
   .prize-board-title {
     font-size: 1.1rem;
   }
-  .prize-board-title--mlc { color: var(--color-cyan); }
-  .prize-board-title--dac { color: var(--color-cyan); }
+  .prize-board-title--mlc { color: var(--color-mlc); }
+  .prize-board-title--dac { color: var(--color-dac); }
   .prize-list {
     margin-top: 1.25rem;
     display: grid;

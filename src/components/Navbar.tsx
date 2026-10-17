@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
+                  ? 'text-mlc bg-mlc/15 shadow-[inset_0_0_0_1px_rgba(205,164,222,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) =>
               `relative px-4 py-2 rounded-full transition-all duration-200 text-sm ${
                 isActive
-                  ? 'text-cyan bg-cyan/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)] font-semibold'
+                  ? 'text-dac bg-dac/15 shadow-[inset_0_0_0_1px_rgba(255,182,193,0.35)] font-semibold'
                   : 'text-ink-dim hover:text-ink hover:bg-white/5'
               }`
             }
@@ -122,7 +122,7 @@ export const Navbar: React.FC = () => {
           onClick={closeMenu}
           className={({ isActive }) =>
             `p-3 rounded-xl transition-all duration-200 ${
-              isActive ? 'text-cyan bg-cyan/10 pl-5 font-semibold' : 'text-ink-dim hover:text-ink hover:bg-white/5'
+              isActive ? 'text-mlc bg-mlc/10 pl-5 font-semibold' : 'text-ink-dim hover:text-ink hover:bg-white/5'
             }`
           }
         >
@@ -133,7 +133,7 @@ export const Navbar: React.FC = () => {
           onClick={closeMenu}
           className={({ isActive }) =>
             `p-3 rounded-xl transition-all duration-200 ${
-              isActive ? 'text-cyan bg-cyan/10 pl-5 font-semibold' : 'text-ink-dim hover:text-ink hover:bg-white/5'
+              isActive ? 'text-dac bg-dac/10 pl-5 font-semibold' : 'text-ink-dim hover:text-ink hover:bg-white/5'
             }`
           }
         >
