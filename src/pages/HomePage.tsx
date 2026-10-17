@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Countdown } from '../components/Countdown';
 import { Timeline, type TimelineStage } from '../components/Timeline';
 import { FaqAccordion, type FaqItem } from '../components/FaqAccordion';
+import { HallOfFame } from '../components/HallOfFame';
 
 const homeTimelineStages: TimelineStage[] = [
   {
@@ -257,64 +258,8 @@ export const HomePage: React.FC = () => {
         stages={homeTimelineStages}
       />
 
-      {/* Hadiah (Centered Headers) */}
-      <section id="hadiah" className="py-20 px-5 text-center" aria-labelledby="hadiah-title">
-        <div className="max-w-[68rem] mx-auto">
-          <p className="font-pixel text-[0.6rem] text-cyan uppercase tracking-widest mb-2.5">High Score</p>
-          <h2 id="hadiah-title" className="font-pixel text-[clamp(1.35rem,4vw,2rem)] text-ink leading-snug">Papan Hadiah</h2>
-          <p className="mt-4 text-ink-dim leading-relaxed text-sm md:text-base">Total nominal hadiah akan diumumkan bersama pembukaan pendaftaran.</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 text-left">
-            <div className="prize-board border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm">
-              <h3 className="font-pixel text-lg text-mlc">MLC</h3>
-              <ul className="mt-5 space-y-2.5 list-none p-0">
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-gold flex items-center gap-2">#1 Juara 1</span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#2 Juara 2</span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#3 Juara 3</span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-              </ul>
-            </div>
-            <div className="prize-board border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm">
-              <h3 className="font-pixel text-lg text-dac">DAC</h3>
-              <ul className="mt-5 space-y-2.5 list-none p-0">
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-gold flex items-center gap-2">#1 Juara 1</span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#2 Juara 2</span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-line/70">
-                  <span className="font-pixel text-xs text-ink-dim flex items-center gap-2">#3 Juara 3</span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-                <li className="flex items-center justify-between p-3.5 bg-void rounded-xl border border-dac/30">
-                  <span className="font-pixel text-xs text-dac flex items-center gap-2.5">
-                    <svg
-                      className="w-5 h-5 text-dac fill-current shrink-0 drop-shadow-[0_0_8px_rgba(255,182,193,0.6)]"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                    Juara Favorit
-                  </span>
-                  <span className="font-pixel text-xs text-ink">TBA</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hall of Fame / High Score Archive */}
+      <HallOfFame />
 
       {/* FAQ (Centered Headers) */}
       <FaqAccordion

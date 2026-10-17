@@ -951,8 +951,8 @@
   .prize-board-title {
     font-size: 1.1rem;
   }
-  .prize-board-title--mlc { color: var(--color-cyan); }
-  .prize-board-title--dac { color: var(--color-cyan); }
+  .prize-board-title--mlc { color: var(--color-mlc); }
+  .prize-board-title--dac { color: var(--color-dac); }
   .prize-list {
     margin-top: 1.25rem;
     display: grid;
