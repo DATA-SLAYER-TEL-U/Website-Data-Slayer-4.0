@@ -31,23 +31,42 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram Resmi Data Slayer"
-              className="w-11 h-11 rounded-lg border border-line flex items-center justify-center text-ink-dim hover:text-cyan hover:border-cyan transition-all"
+              title="Instagram @dataslayer.tup"
+              className="group w-11 h-11 rounded-xl bg-panel-2 border border-line hover:border-[#e8a2d3] flex items-center justify-center text-ink hover:text-[#a23b89] shadow-[0_4px_12px_rgba(110,120,160,0.12)] hover:shadow-[0_6px_16px_rgba(232,162,211,0.35)] transition-all duration-200 hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
             >
-              <svg className="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="0" width="8" height="8" fill="currentColor"/>
-                <rect x="2" y="2" width="4" height="4" fill="#0a0e27"/>
-                <rect x="3" y="3" width="2" height="2" fill="currentColor"/>
-                <rect x="6" y="1" width="1" height="1" fill="#0a0e27"/>
+              <svg
+                className="w-5 h-5 transition-transform duration-200 group-hover:scale-110"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
             <a
               href="mailto:dataslayer.tup@gmail.com"
               aria-label="Email Panitia Data Slayer"
-              className="w-11 h-11 rounded-lg border border-line flex items-center justify-center text-ink-dim hover:text-cyan hover:border-cyan transition-all"
+              title="Email dataslayer.tup@gmail.com"
+              className="group w-11 h-11 rounded-xl bg-panel-2 border border-line hover:border-[#79aee5] flex items-center justify-center text-ink hover:text-[#0369a1] shadow-[0_4px_12px_rgba(110,120,160,0.12)] hover:shadow-[0_6px_16px_rgba(121,174,229,0.35)] transition-all duration-200 hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan"
             >
-              <svg className="pixel-icon" width="18" height="18" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0" y="1" width="8" height="6" fill="currentColor"/>
-                <polygon points="0,1 4,4.5 8,1" fill="#0a0e27"/>
+              <svg
+                className="w-5 h-5 transition-transform duration-200 group-hover:scale-110"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
             </a>
           </div>
