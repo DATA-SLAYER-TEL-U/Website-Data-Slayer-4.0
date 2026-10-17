@@ -278,7 +278,7 @@ export const MlcPage: React.FC = () => {
 
             <div className="border-2 border-line rounded-2xl p-7 bg-panel/80 backdrop-blur-sm flex flex-col transition-all duration-200 hover:-translate-y-1 hover:border-mlc/40 hover:shadow-[0_12px_30px_-10px_rgba(205,164,222,0.2)]">
               <h3 className="font-pixel text-xs text-ink tracking-wide flex items-center gap-2 before:content-['■'] before:text-mlc before:text-[0.65rem]">
-                Fasilitas Peserta
+                Benefit Peserta
               </h3>
               <ul className="mt-5 space-y-3.5 list-none p-0 flex-1">
                 <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
