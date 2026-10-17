@@ -4,6 +4,7 @@ import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { Scanlines } from './Scanlines';
 import { ScrollToTop } from './ScrollToTop';
+import { BackToTop } from './BackToTop';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const Layout: React.FC = () => {
@@ -60,6 +61,7 @@ export const Layout: React.FC = () => {
         <Outlet />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 };
