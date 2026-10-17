@@ -12,6 +12,7 @@ interface TimelineProps {
   title?: string;
   lead?: string;
   stages: TimelineStage[];
+  accentColor?: 'cyan' | 'mlc' | 'dac';
 }
 
 export const Timeline: React.FC<TimelineProps> = ({
@@ -19,6 +20,7 @@ export const Timeline: React.FC<TimelineProps> = ({
   title = 'Timeline Kompetisi',
   lead,
   stages,
+  accentColor = 'cyan',
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [pathD, setPathD] = useState<string>('');
@@ -82,7 +84,7 @@ export const Timeline: React.FC<TimelineProps> = ({
   return (
     <section id="timeline" className="section section--alt overflow-hidden" aria-labelledby="timeline-title">
       <div className="section-inner">
-        <p className="section-eyebrow">{eyebrow}</p>
+        <p className={`section-eyebrow ${accentColor === 'mlc' ? '!text-mlc' : accentColor === 'dac' ? '!text-dac' : ''}`}>{eyebrow}</p>
         <h2 id="timeline-title" className="section-title">{title}</h2>
         {lead && <p className="section-lead">{lead}</p>}
 
@@ -117,7 +119,7 @@ export const Timeline: React.FC<TimelineProps> = ({
               <path
                 d={pathD}
                 fill="none"
-                stroke="var(--color-cyan)"
+                stroke={accentColor === 'mlc' ? 'var(--color-mlc)' : accentColor === 'dac' ? 'var(--color-dac)' : 'var(--color-cyan)'}
                 strokeWidth="2.5"
                 strokeDasharray="9 7"
                 strokeLinecap="round"
@@ -127,14 +129,24 @@ export const Timeline: React.FC<TimelineProps> = ({
             </svg>
           )}
 
-          <ol className="level-track">
+          <ol className={`level-track ${accentColor === 'mlc' ? 'level-track--mlc' : accentColor === 'dac' ? 'level-track--dac' : ''}`}>
             {stages.map((stage) => (
               <li key={stage.num} className="level-stage">
                 <span className="level-num">{stage.num}</span>
                 <div className="level-body">
                   <h3>{stage.title}</h3>
                   <p>{stage.desc}</p>
-                  <time>{stage.time}</time>
+                  <time
+                    className={
+                      accentColor === 'mlc'
+                        ? '!text-mlc !bg-transparent !border-0 !p-0'
+                        : accentColor === 'dac'
+                        ? '!text-dac !bg-transparent !border-0 !p-0'
+                        : '!text-cyan !bg-transparent !border-0 !p-0'
+                    }
+                  >
+                    {stage.time}
+                  </time>
                 </div>
               </li>
             ))}

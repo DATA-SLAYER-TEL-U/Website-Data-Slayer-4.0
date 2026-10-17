@@ -11,6 +11,7 @@ interface FaqAccordionProps {
   title?: string;
   items: FaqItem[];
   sectionAlt?: boolean;
+  accentColor?: 'cyan' | 'mlc' | 'dac';
 }
 
 export const FaqAccordion: React.FC<FaqAccordionProps> = ({
@@ -19,6 +20,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   title = 'Pertanyaan Umum',
   items,
   sectionAlt = true,
+  accentColor = 'cyan',
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -29,7 +31,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
   return (
     <section id={id} className={`section ${sectionAlt ? 'section--alt' : ''}`} aria-labelledby={`${id}-title`}>
       <div className="section-inner section-inner--narrow">
-        <p className="section-eyebrow">{eyebrow}</p>
+        <p className={`section-eyebrow ${accentColor === 'mlc' ? '!text-mlc' : accentColor === 'dac' ? '!text-dac' : ''}`}>{eyebrow}</p>
         <h2 id={`${id}-title`} className="section-title">{title}</h2>
 
         <div className="faq-list">
