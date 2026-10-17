@@ -139,7 +139,7 @@ export const DacPage: React.FC = () => {
 
           <div className="inline-flex items-center gap-2 font-pixel text-[0.55rem] sm:text-[0.6rem] text-dac bg-dac/10 border border-dac/30 px-4 py-2 rounded-full mt-4">
             <span>TEMA:</span>
-            <span className="text-ink font-semibold">&ldquo;Smart Educational Visualization for Human Capital&rdquo;</span>
+            <span className="text-ink font-semibold">&ldquo;Smart Educational Visualization for Human Capital: Mengembangkan Dashboard yang Inklusif, Adaptif, dan Solutif&rdquo;</span>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3.5 mt-7">
@@ -182,7 +182,7 @@ export const DacPage: React.FC = () => {
               </span>
             </div>
             <h3 className="font-pixel text-sm md:text-base text-ink leading-relaxed">
-              &ldquo;Smart Educational Visualization for Human Capital&rdquo;
+              &ldquo;Smart Educational Visualization for Human Capital: Mengembangkan Dashboard yang Inklusif, Adaptif, dan Solutif&rdquo;
             </h3>
             <p className="text-ink-dim leading-relaxed text-sm mt-2.5">
               Membangun dasbor visualisasi analitis interaktif yang mengupas dinamika data pendidikan dan pengembangan
