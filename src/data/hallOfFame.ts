@@ -65,7 +65,7 @@ export const hallOfFameData: EditionHallOfFame[] = [
     edition: '3.0',
     tabLabel: 'Data Slayer 3.0',
     year: '2025',
-    subtitle: 'penakluk data di panggung Data Slayer 3.0 (Tahun 2025).',
+    subtitle: 'Penakluk data di panggung Data Slayer 3.0 (Tahun 2025).',
     isUpcoming: false,
     mlc: [
       {
