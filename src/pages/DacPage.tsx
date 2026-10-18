@@ -80,7 +80,7 @@ const dacFaqItems: FaqItem[] = [
   },
   {
     question: 'Apakah boleh menggunakan tools selain Tableau, Power BI, atau Looker Studio?',
-    answer: 'Secara umum diutamakan menggunakan Business Intelligence tools populer (Tableau, Power BI, Looker Studio). Apabila menggunakan Streamlit atau web-based visualization lain, pastikan dapat diakses publik via tautan aktif.',
+    answer: 'Demi menjamin kesetaraan dan standarisasi penilaian DAC, karya wajib dibuat menggunakan Tableau, Power BI, atau Looker Studio. Penggunaan tools maupun framework di luar ketentuan ini (termasuk Streamlit dan web apps) tidak diizinkan dan akan didiskualifikasi secara otomatis.',
   },
   {
     question: 'Apakah peserta harus mengumpulkan laporan analisis tertulis di babak penyisihan?',
@@ -88,7 +88,7 @@ const dacFaqItems: FaqItem[] = [
   },
   {
     question: 'Berapa anggota per tim untuk kategori DAC?',
-    answer: 'Sama seperti MLC, setiap tim DAC terdiri dari 1 hingga 3 mahasiswa aktif dari perguruan tinggi yang sama.',
+    answer: 'Setiap tim DAC terdiri dari 1 hingga 3 mahasiswa aktif, dan diperbolehkan berasal dari perguruan tinggi yang berbeda.',
   },
   {
     question: 'Bagaimana sistem penilaian juara favorit di DAC?',
@@ -149,12 +149,14 @@ export const DacPage: React.FC = () => {
                 SEGERA
               </span>
             </span>
-            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
-              Registration
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-dac bg-dac/15 border border-dac/30 px-2 py-0.5 rounded">
-                SEGERA
-              </span>
-            </span>
+            <a
+              href="https://data-slayer.com/REGISTRASIDAC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-pixel text-xs px-6 py-3 rounded-xl font-bold text-ink bg-dac shadow-[0_4px_16px_rgba(255,182,193,0.4)] hover:shadow-[0_6px_22px_rgba(255,182,193,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+            >
+              Registrasi Sekarang
+            </a>
           </div>
 
           <Countdown />
@@ -341,23 +343,52 @@ export const DacPage: React.FC = () => {
       />
 
       {/* CTA */}
-      <section className="py-16 px-5 text-center" aria-labelledby="cta-dac-title">
-        <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-dac bg-dac/10 border border-dac/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(255,182,193,0.2)]">
-            PENDAFTARAN SEGERA DIBUKA
-          </span>
-          <h2 id="cta-dac-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] mt-5">
-            Siap Rancang Dashboardmu?
-          </h2>
-          <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
-            Persiapkan cerita di balik datamu dan buktikan keunggulan analitik tim kamu.
-          </p>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-ink bg-gradient-to-r from-dac to-dac shadow-[0_0_15px_rgba(255,182,193,0.4)] hover:shadow-[0_0_24px_rgba(255,182,193,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-          >
-            Kembali ke Beranda
-          </Link>
+      <section 
+        id="daftar" 
+        className="min-h-[calc(100vh-6.5rem)] flex items-center justify-center py-12 px-5 scroll-mt-24 bg-gradient-to-b from-transparent via-panel/30 to-transparent" 
+        aria-labelledby="cta-dac-title"
+      >
+        <div className="relative z-10 w-full max-w-[54rem] mx-auto rounded-3xl bg-panel/85 backdrop-blur-md border-2 border-white/90 p-8 sm:p-14 md:p-16 shadow-[0_20px_50px_rgba(110,120,160,0.18)] overflow-hidden text-center flex flex-col items-center justify-center">
+          
+          {/* Subtle Arcade Background Accent */}
+          <div 
+            className="absolute right-0 bottom-0 w-48 md:w-64 h-48 md:h-64 pointer-events-none opacity-20 -mr-12 -mb-12 select-none"
+            style={{ 
+              backgroundImage: "url('/arcade.webp')", 
+              backgroundSize: "contain", 
+              backgroundPosition: "bottom right", 
+              backgroundRepeat: "no-repeat" 
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 flex flex-col items-center max-w-[42rem] mx-auto">
+            <h2 id="cta-dac-title" className="font-pixel text-[clamp(1.5rem,4.5vw,2.5rem)] text-ink leading-snug">
+              Siap Rancang Dashboardmu?
+            </h2>
+
+            <p className="text-ink-dim mt-4 max-w-[46ch] leading-relaxed text-sm md:text-base">
+              Daftarkan tim terbaikmu sekarang dan buktikan keunggulan analitik visual kamu.
+            </p>
+
+            {/* Actions */}
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+              <a
+                href="https://data-slayer.com/REGISTRASIDAC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink bg-dac shadow-[0_4px_16px_rgba(255,182,193,0.4)] hover:shadow-[0_6px_22px_rgba(255,182,193,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Daftar DAC Sekarang
+              </a>
+              <Link
+                to="/"
+                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-7 py-3.5 font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Kembali ke Beranda
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

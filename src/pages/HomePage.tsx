@@ -271,27 +271,57 @@ export const HomePage: React.FC = () => {
       />
 
       {/* CTA */}
-      <section id="daftar" className="py-20 px-5 text-center bg-gradient-to-b from-transparent via-panel/40 to-transparent" aria-labelledby="cta-title">
-        <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(255,255,255,0.1)]">
-            PENDAFTARAN SEGERA DIBUKA
-          </span>
-          <h2 id="cta-title" className="font-pixel text-[clamp(1.35rem,4vw,2.1rem)] mt-5 text-ink">
-            Siap Jadi Juara?
-          </h2>
-          <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
-            Pantau terus linimasa kami. Persiapkan tim terbaikmu dan jadilah juara di panggung data
-            nasional tahun ini.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3.5 mt-8">
-            <a
-              href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center min-h-[44px] rounded-lg px-6 py-3 font-pixel text-xs font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-            >
-              Instagram Resmi
-            </a>
+      <section 
+        id="daftar" 
+        className="min-h-[calc(100vh-6.5rem)] flex items-center justify-center py-12 px-5 scroll-mt-24 bg-gradient-to-b from-transparent via-panel/30 to-transparent" 
+        aria-labelledby="cta-title"
+      >
+        <div className="relative z-10 w-full max-w-[54rem] mx-auto rounded-3xl bg-panel/85 backdrop-blur-md border-2 border-white/90 p-8 sm:p-14 md:p-16 shadow-[0_20px_50px_rgba(110,120,160,0.18)] overflow-hidden text-center flex flex-col items-center justify-center">
+          
+          {/* Subtle Arcade Background Accent */}
+          <div 
+            className="absolute right-0 bottom-0 w-48 md:w-64 h-48 md:h-64 pointer-events-none opacity-20 -mr-12 -mb-12 select-none"
+            style={{ 
+              backgroundImage: "url('/arcade.webp')", 
+              backgroundSize: "contain", 
+              backgroundPosition: "bottom right", 
+              backgroundRepeat: "no-repeat" 
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 flex flex-col items-center max-w-[42rem] mx-auto">
+            <h2 id="cta-title" className="font-pixel text-[clamp(1.5rem,4.5vw,2.5rem)] text-ink leading-snug">
+              Siap Jadi Juara?
+            </h2>
+
+            <p className="text-ink-dim mt-4 max-w-[46ch] leading-relaxed text-sm md:text-base">
+              Pantau terus linimasa kami. Persiapkan tim terbaikmu dan jadilah juara di panggung data
+              nasional tahun ini.
+            </p>
+
+            {/* Actions */}
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+              <a
+                href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink bg-cyan shadow-[0_4px_16px_rgba(121,174,229,0.35)] hover:shadow-[0_6px_22px_rgba(121,174,229,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                Instagram Resmi
+              </a>
+              <a
+                href="#kategori"
+                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-7 py-3.5 font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Lihat Kategori
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
 
         <a
           href="/#daftar"
-          className="hidden min-[900px]:inline-flex items-center justify-center rounded-full px-6 py-2.5 font-body text-xs md:text-sm font-bold text-ink bg-gradient-to-r from-panel-2 to-panel shadow-[0_0_16px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap"
+          className="hidden min-[900px]:inline-flex items-center justify-center rounded-full px-6 py-2.5 font-body text-xs md:text-sm font-bold text-ink bg-white/90 hover:bg-white border border-white/80 hover:border-cyan/40 shadow-[0_4px_16px_rgba(110,120,160,0.22)] hover:shadow-[0_6px_24px_rgba(121,174,229,0.38)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 whitespace-nowrap"
         >
           Daftar Sekarang
         </a>
@@ -152,7 +152,7 @@ export const Navbar: React.FC = () => {
         </NavLink>
         <a
           href="/#daftar"
-          className="flex items-center justify-center rounded-xl mt-3 py-2.5 px-4 font-body text-sm font-bold text-ink bg-gradient-to-r from-panel-2 to-panel shadow-[0_0_14px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] active:translate-y-0.5 transition-all duration-200 text-center"
+          className="flex items-center justify-center rounded-xl mt-3 py-2.5 px-4 font-body text-sm font-bold text-ink bg-white/90 hover:bg-white border border-white/80 shadow-[0_4px_16px_rgba(110,120,160,0.22)] hover:shadow-[0_6px_24px_rgba(121,174,229,0.38)] active:translate-y-0.5 transition-all duration-200 text-center"
           onClick={closeMenu}
         >
           Daftar Sekarang

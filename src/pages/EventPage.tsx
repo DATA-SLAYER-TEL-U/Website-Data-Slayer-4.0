@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const EventPage: React.FC = () => {
   return (
@@ -110,22 +111,58 @@ export const EventPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 px-5 text-center bg-gradient-to-b from-transparent via-panel/50 to-transparent" aria-labelledby="cta-event-title">
-        <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <h2 id="cta-event-title" className="text-[clamp(1.35rem,3.5vw,2rem)] font-bold text-ink">
-            Jangan Sampai Terlewat
-          </h2>
-          <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
-            Ikuti Instagram panitia untuk info tanggal, pembicara, dan link pendaftaran webinar.
-          </p>
-          <a
-            href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-void bg-gradient-to-r from-cyan to-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_24px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-          >
-            Buka Instagram Resmi
-          </a>
+      {/* CTA */}
+      <section 
+        id="daftar" 
+        className="min-h-[calc(100vh-6.5rem)] flex items-center justify-center py-12 px-5 scroll-mt-24 bg-gradient-to-b from-transparent via-panel/30 to-transparent" 
+        aria-labelledby="cta-event-title"
+      >
+        <div className="relative z-10 w-full max-w-[54rem] mx-auto rounded-3xl bg-panel/85 backdrop-blur-md border-2 border-white/90 p-8 sm:p-14 md:p-16 shadow-[0_20px_50px_rgba(110,120,160,0.18)] overflow-hidden text-center flex flex-col items-center justify-center">
+          
+          {/* Subtle Arcade Background Accent */}
+          <div 
+            className="absolute right-0 bottom-0 w-48 md:w-64 h-48 md:h-64 pointer-events-none opacity-20 -mr-12 -mb-12 select-none"
+            style={{ 
+              backgroundImage: "url('/arcade.webp')", 
+              backgroundSize: "contain", 
+              backgroundPosition: "bottom right", 
+              backgroundRepeat: "no-repeat" 
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 flex flex-col items-center max-w-[42rem] mx-auto">
+            <h2 id="cta-event-title" className="font-pixel text-[clamp(1.5rem,4.5vw,2.5rem)] text-ink leading-snug">
+              Jangan Sampai Terlewat
+            </h2>
+
+            <p className="text-ink-dim mt-4 max-w-[46ch] leading-relaxed text-sm md:text-base">
+              Ikuti Instagram panitia untuk info tanggal, pembicara, dan link pendaftaran webinar.
+            </p>
+
+            {/* Actions */}
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+              <a
+                href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink bg-cyan shadow-[0_4px_16px_rgba(121,174,229,0.35)] hover:shadow-[0_6px_22px_rgba(121,174,229,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                Buka Instagram Resmi
+              </a>
+              <Link
+                to="/"
+                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-7 py-3.5 font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Kembali ke Beranda
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

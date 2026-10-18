@@ -131,12 +131,14 @@ export const MlcPage: React.FC = () => {
                 SEGERA
               </span>
             </span>
-            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
-              Registration
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-mlc bg-mlc/15 border border-mlc/30 px-2 py-0.5 rounded">
-                SEGERA
-              </span>
-            </span>
+            <a
+              href="https://data-slayer.com/REGISTRASIMLC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-pixel text-xs px-6 py-3 rounded-xl font-bold text-ink bg-mlc shadow-[0_4px_16px_rgba(205,164,222,0.4)] hover:shadow-[0_6px_22px_rgba(205,164,222,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+            >
+              Registrasi Sekarang
+            </a>
           </div>
 
           <Countdown />
@@ -319,23 +321,52 @@ export const MlcPage: React.FC = () => {
       />
 
       {/* CTA */}
-      <section className="py-16 px-5 text-center" aria-labelledby="cta-mlc-title">
-        <div className="max-w-[42rem] mx-auto flex flex-col items-center">
-          <span className="inline-flex items-center gap-1.5 font-pixel text-[0.55rem] tracking-wider text-mlc bg-mlc/10 border border-mlc/30 px-3 py-1.5 rounded shadow-[0_0_10px_rgba(205,164,222,0.2)]">
-            PENDAFTARAN SEGERA DIBUKA
-          </span>
-          <h2 id="cta-mlc-title" className="font-pixel text-[clamp(1.25rem,3.5vw,1.9rem)] mt-5">
-            Siap Latih Modelmu?
-          </h2>
-          <p className="text-ink-dim mt-3.5 max-w-[46ch] leading-relaxed text-sm md:text-base">
-            Ikuti info terbaru supaya tidak ketinggalan gelombang pendaftaran MLC.
-          </p>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 font-pixel text-xs px-8 py-4 mt-7 rounded-xl font-bold text-ink bg-gradient-to-r from-mlc to-mlc shadow-[0_0_15px_rgba(205,164,222,0.4)] hover:shadow-[0_0_24px_rgba(205,164,222,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-          >
-            Kembali ke Beranda
-          </Link>
+      <section 
+        id="daftar" 
+        className="min-h-[calc(100vh-6.5rem)] flex items-center justify-center py-12 px-5 scroll-mt-24 bg-gradient-to-b from-transparent via-panel/30 to-transparent" 
+        aria-labelledby="cta-mlc-title"
+      >
+        <div className="relative z-10 w-full max-w-[54rem] mx-auto rounded-3xl bg-panel/85 backdrop-blur-md border-2 border-white/90 p-8 sm:p-14 md:p-16 shadow-[0_20px_50px_rgba(110,120,160,0.18)] overflow-hidden text-center flex flex-col items-center justify-center">
+          
+          {/* Subtle Arcade Background Accent */}
+          <div 
+            className="absolute right-0 bottom-0 w-48 md:w-64 h-48 md:h-64 pointer-events-none opacity-20 -mr-12 -mb-12 select-none"
+            style={{ 
+              backgroundImage: "url('/arcade.webp')", 
+              backgroundSize: "contain", 
+              backgroundPosition: "bottom right", 
+              backgroundRepeat: "no-repeat" 
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative z-10 flex flex-col items-center max-w-[42rem] mx-auto">
+            <h2 id="cta-mlc-title" className="font-pixel text-[clamp(1.5rem,4.5vw,2.5rem)] text-ink leading-snug">
+              Siap Latih Modelmu?
+            </h2>
+
+            <p className="text-ink-dim mt-4 max-w-[46ch] leading-relaxed text-sm md:text-base">
+              Daftarkan tim terbaikmu sekarang dan buktikan keunggulan model machine learning kamu.
+            </p>
+
+            {/* Actions */}
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+              <a
+                href="https://data-slayer.com/REGISTRASIMLC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink bg-mlc shadow-[0_4px_16px_rgba(205,164,222,0.4)] hover:shadow-[0_6px_22px_rgba(205,164,222,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Daftar MLC Sekarang
+              </a>
+              <Link
+                to="/"
+                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-7 py-3.5 font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Kembali ke Beranda
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
