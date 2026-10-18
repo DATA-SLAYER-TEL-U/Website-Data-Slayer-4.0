@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Countdown } from '../components/Countdown';
 import { Timeline, type TimelineStage } from '../components/Timeline';
 import { FaqAccordion, type FaqItem } from '../components/FaqAccordion';
-import { useRegistrationStatus } from '../hooks/useRegistrationStatus';
+import { useRegistrationStatus, useGuidebookStatus } from '../hooks/useRegistrationStatus';
+import { GUIDEBOOK_FILES } from '../lib/registration';
 
 const mlcTimelineStages: TimelineStage[] = [
   {
@@ -82,6 +83,7 @@ const mlcFaqItems: FaqItem[] = [
 export const MlcPage: React.FC = () => {
   const [assessmentStage, setAssessmentStage] = useState<'penyisihan' | 'final'>('penyisihan');
   const isRegOpen = useRegistrationStatus();
+  const isGuidebookOpen = useGuidebookStatus();
 
   return (
     <>
@@ -127,12 +129,33 @@ export const MlcPage: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3.5 mt-7">
-            <span className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/80 text-ink cursor-not-allowed select-none shadow-sm">
-              Guidebook
-              <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-mlc bg-mlc/15 border border-mlc/30 px-2 py-0.5 rounded">
-                SEGERA
+            {isGuidebookOpen ? (
+              <a
+                href={GUIDEBOOK_FILES.MLC.url}
+                download={GUIDEBOOK_FILES.MLC.filename}
+                className="inline-flex items-center gap-2.5 font-pixel text-xs px-5 py-3 rounded-xl border-2 border-mlc/40 bg-panel/90 text-ink hover:bg-mlc/15 hover:border-mlc shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                title="Unduh Guidebook Resmi MLC (PDF)"
+                aria-label="Unduh Guidebook Resmi Machine Learning Competition (PDF)"
+              >
+                <svg className="w-3.5 h-3.5 fill-none stroke-current stroke-2 text-mlc shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Guidebook
+                <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-mlc bg-mlc/15 border border-mlc/30 px-1.5 py-0.5 rounded">
+                  UNDUH
+                </span>
+              </a>
+            ) : (
+              <span
+                className="inline-flex items-center gap-2 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/70 text-ink-dim/80 cursor-not-allowed select-none shadow-sm"
+                title="Guidebook resmi otomatis dibuka pada 19 Oktober 2026 pukul 00:00 WIB"
+              >
+                Guidebook
+                <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-mlc bg-mlc/15 border border-mlc/30 px-2 py-0.5 rounded">
+                  19 OKT
+                </span>
               </span>
-            </span>
+            )}
             {isRegOpen ? (
               <a
                 href="https://data-slayer.com/REGISTRASIMLC"
