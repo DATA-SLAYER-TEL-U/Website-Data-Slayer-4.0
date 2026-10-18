@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Countdown } from '../components/Countdown';
 import { Timeline, type TimelineStage } from '../components/Timeline';
 import { FaqAccordion, type FaqItem } from '../components/FaqAccordion';
+import { useRegistrationStatus } from '../hooks/useRegistrationStatus';
 
 const dacTimelineStages: TimelineStage[] = [
   {
@@ -98,6 +99,7 @@ const dacFaqItems: FaqItem[] = [
 
 export const DacPage: React.FC = () => {
   const [assessmentStage, setAssessmentStage] = useState<'penyisihan' | 'final'>('penyisihan');
+  const isRegOpen = useRegistrationStatus();
 
   return (
     <>
@@ -149,14 +151,26 @@ export const DacPage: React.FC = () => {
                 SEGERA
               </span>
             </span>
-            <a
-              href="https://data-slayer.com/REGISTRASIDAC"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-pixel text-xs px-6 py-3 rounded-xl font-bold text-ink bg-dac shadow-[0_4px_16px_rgba(255,182,193,0.4)] hover:shadow-[0_6px_22px_rgba(255,182,193,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-            >
-              Registrasi Sekarang
-            </a>
+            {isRegOpen ? (
+              <a
+                href="https://data-slayer.com/REGISTRASIDAC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-pixel text-xs px-6 py-3 rounded-xl font-bold text-ink bg-dac shadow-[0_4px_16px_rgba(255,182,193,0.4)] hover:shadow-[0_6px_22px_rgba(255,182,193,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              >
+                Registrasi Sekarang
+              </a>
+            ) : (
+              <span
+                className="inline-flex items-center gap-2 font-pixel text-xs px-5 py-3 rounded-xl border border-line bg-panel/70 text-ink-dim/80 cursor-not-allowed select-none shadow-sm"
+                title="Pendaftaran otomatis dibuka pada 19 Oktober 2026 pukul 00:00 WIB"
+              >
+                Registration
+                <span className="inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-dac bg-dac/15 border border-dac/30 px-2 py-0.5 rounded">
+                  19 OKT
+                </span>
+              </span>
+            )}
           </div>
 
           <Countdown />
@@ -368,19 +382,32 @@ export const DacPage: React.FC = () => {
             </h2>
 
             <p className="text-ink-dim mt-4 max-w-[46ch] leading-relaxed text-sm md:text-base">
-              Daftarkan tim terbaikmu sekarang dan buktikan keunggulan analitik visual kamu.
+              {isRegOpen
+                ? 'Daftarkan tim terbaikmu sekarang dan buktikan keunggulan analitik visual kamu.'
+                : 'Pendaftaran resmi dibuka 19 Oktober 2026 pukul 00:00 WIB. Persiapkan tim terbaikmu dan pantau terus linimasa.'}
             </p>
 
             {/* Actions */}
             <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
-              <a
-                href="https://data-slayer.com/REGISTRASIDAC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink bg-dac shadow-[0_4px_16px_rgba(255,182,193,0.4)] hover:shadow-[0_6px_22px_rgba(255,182,193,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-              >
-                Daftar DAC Sekarang
-              </a>
+              {isRegOpen ? (
+                <a
+                  href="https://data-slayer.com/REGISTRASIDAC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink bg-dac shadow-[0_4px_16px_rgba(255,182,193,0.4)] hover:shadow-[0_6px_22px_rgba(255,182,193,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                >
+                  Daftar DAC Sekarang
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink-dim/70 bg-dac/30 border border-dac/30 cursor-not-allowed select-none shadow-none"
+                  title="Pendaftaran resmi dibuka otomatis pada 19 Oktober 2026 pukul 00:00 WIB"
+                >
+                  Dibuka 19 Oktober
+                </button>
+              )}
               <Link
                 to="/"
                 className="inline-flex items-center justify-center min-h-[44px] rounded-xl px-7 py-3.5 font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
