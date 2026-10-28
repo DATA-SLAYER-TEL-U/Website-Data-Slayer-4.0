@@ -38,9 +38,15 @@ const homeTimelineStages: TimelineStage[] = [
   },
   {
     num: '06',
-    title: 'Babak Grand Final & Awarding',
-    desc: 'Presentasi karya langsung di hadapan dewan juri, penentuan juara, dan penutupan acara.',
+    title: 'Babak Grand Final',
+    desc: 'Sesi presentasi karya secara langsung di hadapan dewan juri bagi finalis MLC dan DAC.',
     time: '19 Desember 2026',
+  },
+  {
+    num: '07',
+    title: 'Pengumuman Juara',
+    desc: 'Pengumuman resmi pemenang kompetisi Data Slayer 4.0 serta sesi awarding.',
+    time: '21 Desember 2026',
   },
 ];
 
