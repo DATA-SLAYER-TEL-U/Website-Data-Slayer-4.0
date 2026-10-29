@@ -262,7 +262,7 @@ export const DacPage: React.FC = () => {
                 </li>
                 <li className="flex justify-between items-baseline gap-4 text-sm pb-3 border-b border-dashed border-white/10">
                   <span className="text-ink-dim shrink-0">Output penyisihan</span>
-                  <strong className="text-ink font-semibold text-right">Link dasbor publik + video ringkas</strong>
+                  <strong className="text-ink font-semibold text-right">Link dasbor publik</strong>
                 </li>
                 <li className="flex justify-between items-baseline gap-4 text-sm">
                   <span className="text-ink-dim shrink-0">Babak final</span>
