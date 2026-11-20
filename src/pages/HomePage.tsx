@@ -233,7 +233,7 @@ export const HomePage: React.FC = () => {
           <p className="font-pixel text-[0.6rem] text-cyan uppercase tracking-widest mb-2.5">Side Quest</p>
           <h2 id="event-title" className="font-pixel text-[clamp(1.35rem,4vw,2rem)] text-ink leading-snug">Featured Event</h2>
           <p className="mt-4 text-ink-dim leading-relaxed text-sm md:text-base">
-            Sebelum babak utama dimulai, ikuti rangkaian pemanasan untuk mengasah pemahamanmu seputar dunia data.
+            Perkaya wawasan dan asah kemampuan analisismu seputar dunia data melalui rangkaian webinar eksklusif Data Slayer 4.0.
           </p>
 
           <Link
@@ -243,14 +243,15 @@ export const HomePage: React.FC = () => {
           >
             <div className="flex items-center gap-3">
               <span className="font-pixel text-[0.55rem] text-cyan bg-cyan/10 border border-cyan/30 px-2.5 py-1 rounded">WEBINAR</span>
+              <span className="font-pixel text-[0.55rem] text-cyan bg-cyan/10 border border-cyan/30 px-2.5 py-1 rounded">PENDAFTARAN DIBUKA</span>
             </div>
             <h3 className="font-pixel text-lg text-ink mt-3">Road to Data Slayer 4.0</h3>
             <p className="mt-3 text-ink-dim text-sm leading-relaxed">
               Webinar bersama narasumber profesional membahas penerapan data dan visualisasi untuk
-              mendukung isu-isu terkini. Jadwal dan pembicara segera diumumkan.
+              mendukung isu-isu terkini. Pendaftaran webinar telah resmi dibuka!
             </p>
             <span className="inline-flex items-center font-pixel text-[0.55rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-3 py-1.5 rounded mt-4">
-              JADWAL SEGERA
+              LIHAT DETAIL & DAFTAR →
             </span>
           </Link>
         </div>
