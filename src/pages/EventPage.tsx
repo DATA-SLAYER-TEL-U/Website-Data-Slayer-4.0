@@ -103,7 +103,10 @@ export const EventPage: React.FC = () => {
                   <div>
                     <p className="text-[0.65rem] text-ink-dim font-pixel">PLATFORM</p>
                     <p className="font-semibold text-xs">Zoom Meeting</p>
-                    <p className="text-[0.7rem] text-ink-dim">Gratis (Free)</p>
+                    <p className="text-[0.7rem] text-cyan font-pixel mt-0.5 inline-flex items-center gap-1.5">
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+                      Link Zoom Menyusul
+                    </p>
                   </div>
                 </div>
               </div>
@@ -158,6 +161,18 @@ export const EventPage: React.FC = () => {
                     UNDUH ↓
                   </span>
                 </a>
+                <div className="resource-link flex items-center gap-3.5 p-4 bg-panel/70 border border-line rounded-xl text-sm font-semibold opacity-75 cursor-not-allowed">
+                  <span className="text-cyan">
+                    <svg className="pixel-icon" width="20" height="20" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0" y="2" width="5" height="4" fill="currentColor"/>
+                      <polygon points="5,3 8,1 8,7 5,5" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  <span>Link Zoom Meeting</span>
+                  <span className="ml-auto shrink-0 inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2.5 py-1 rounded">
+                    MENYUSUL
+                  </span>
+                </div>
                 <div className="resource-link flex items-center gap-3.5 p-4 bg-panel/70 border border-line rounded-xl text-sm font-semibold opacity-60 cursor-not-allowed">
                   <span className="text-cyan">
                     <svg className="pixel-icon" width="20" height="20" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
