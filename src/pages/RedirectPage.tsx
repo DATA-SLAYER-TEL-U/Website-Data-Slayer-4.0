@@ -112,7 +112,7 @@ export const RedirectPage: React.FC = () => {
               <Countdown
                 targetDate="2026-10-19T00:00:00+07:00"
                 label="Pendaftaran dibuka dalam:"
-                note="Registrasi Batch 1: 19 Oktober – 8 November 2026"
+                note="Registrasi Batch 1: 19 Oktober - 8 November 2026"
               />
             </div>
 

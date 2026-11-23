@@ -178,7 +178,7 @@ export const MlcPage: React.FC = () => {
             )}
           </div>
 
-          <Countdown />
+          <Countdown category="mlc" accentColor="mlc" />
         </div>
       </section>
 

@@ -202,7 +202,7 @@ export const DacPage: React.FC = () => {
             )}
           </div>
 
-          <Countdown />
+          <Countdown category="dac" accentColor="dac" />
         </div>
       </section>
 

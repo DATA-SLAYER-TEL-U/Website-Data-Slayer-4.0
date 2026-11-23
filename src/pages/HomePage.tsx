@@ -143,7 +143,7 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
 
-          <Countdown />
+          <Countdown category="home" accentColor="cyan" />
         </div>
       </section>
 
