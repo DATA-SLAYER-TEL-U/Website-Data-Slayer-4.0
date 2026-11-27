@@ -93,14 +93,8 @@ export const EventPage: React.FC = () => {
                   </div>
                 </div>
 
-                <a
-                  href="https://ittelkom-pwt-ac-id.zoom.us/j/81122945636?pwd=P8EnEZiB70KtQ9ZwjYkRsyOvLXOTPU.1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 p-3 rounded-lg bg-panel/50 border border-line/60 hover:border-cyan/50 hover:bg-panel text-xs text-ink transition-all group"
-                  title="Klik untuk bergabung ke Zoom Meeting"
-                >
-                  <span className="text-cyan group-hover:scale-110 transition-transform">
+                <div className="flex items-center gap-2.5 p-3 rounded-lg bg-panel/50 border border-line/60 text-xs text-ink">
+                  <span className="text-cyan">
                     <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                       <polygon points="23 7 16 12 23 17 23 7" />
                       <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
@@ -108,13 +102,10 @@ export const EventPage: React.FC = () => {
                   </span>
                   <div>
                     <p className="text-[0.65rem] text-ink-dim font-pixel">PLATFORM</p>
-                    <p className="font-semibold text-xs group-hover:text-cyan transition-colors">Zoom Meeting</p>
-                    <p className="text-[0.7rem] text-cyan font-pixel mt-0.5 inline-flex items-center gap-1.5">
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                      Masuk Ruang Zoom ↗
-                    </p>
+                    <p className="font-semibold text-xs">Zoom Meeting</p>
+                    <p className="text-[0.7rem] text-ink-dim">Gratis (Free)</p>
                   </div>
-                </a>
+                </div>
               </div>
 
               <div className="flex flex-wrap items-center gap-3 mt-6">
@@ -131,18 +122,7 @@ export const EventPage: React.FC = () => {
                   </svg>
                   Daftar Webinar Sekarang
                 </a>
-                <a
-                  href="https://ittelkom-pwt-ac-id.zoom.us/j/81122945636?pwd=P8EnEZiB70KtQ9ZwjYkRsyOvLXOTPU.1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-                >
-                  <svg className="w-4 h-4 fill-none stroke-current stroke-2 text-cyan" viewBox="0 0 24 24" aria-hidden="true">
-                    <polygon points="23 7 16 12 23 17 23 7" />
-                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                  </svg>
-                  Join Zoom
-                </a>
+
                 <a
                   href="https://wa.me/6282144236616"
                   target="_blank"
@@ -179,23 +159,18 @@ export const EventPage: React.FC = () => {
                     UNDUH ↓
                   </span>
                 </a>
-                <a
-                  href="https://ittelkom-pwt-ac-id.zoom.us/j/81122945636?pwd=P8EnEZiB70KtQ9ZwjYkRsyOvLXOTPU.1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="resource-link flex items-center gap-3.5 p-4 bg-panel/90 border border-line hover:border-cyan/50 hover:bg-panel rounded-xl text-sm font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(121,174,229,0.25)] group"
-                >
-                  <span className="text-cyan group-hover:scale-110 transition-transform">
+                <div className="resource-link flex items-center gap-3.5 p-4 bg-panel/70 border border-line rounded-xl text-sm font-semibold opacity-50 cursor-not-allowed">
+                  <span className="text-cyan">
                     <svg className="pixel-icon" width="20" height="20" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                       <rect x="0" y="2" width="5" height="4" fill="currentColor"/>
                       <polygon points="5,3 8,1 8,7 5,5" fill="currentColor"/>
                     </svg>
                   </span>
                   <span>Link Zoom Meeting</span>
-                  <span className="ml-auto shrink-0 inline-flex items-center gap-1 font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/40 px-2.5 py-1 rounded shadow-sm group-hover:bg-cyan group-hover:text-void transition-colors">
-                    GABUNG ↗
+                  <span className="ml-auto shrink-0 inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-ink-dim bg-line/30 border border-line/60 px-2.5 py-1 rounded">
+                    SELESAI
                   </span>
-                </a>
+                </div>
                 <a
                   href="https://data-slayer.com/NOTULENSI-WEBINARDAC"
                   target="_blank"
@@ -324,18 +299,7 @@ export const EventPage: React.FC = () => {
                 </svg>
                 Daftar Webinar Sekarang
               </a>
-              <a
-                href="https://ittelkom-pwt-ac-id.zoom.us/j/81122945636?pwd=P8EnEZiB70KtQ9ZwjYkRsyOvLXOTPU.1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 justify-center min-h-[44px] rounded-xl px-7 py-3.5 font-pixel text-xs font-bold text-ink bg-white/90 hover:bg-white border border-white/90 shadow-[0_4px_14px_rgba(110,120,160,0.18)] hover:shadow-[0_6px_20px_rgba(121,174,229,0.3)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-              >
-                <svg className="w-4 h-4 fill-none stroke-current stroke-2 text-cyan" viewBox="0 0 24 24" aria-hidden="true">
-                  <polygon points="23 7 16 12 23 17 23 7" />
-                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                </svg>
-                Masuk Ruang Zoom
-              </a>
+
               <a
                 href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
                 target="_blank"
