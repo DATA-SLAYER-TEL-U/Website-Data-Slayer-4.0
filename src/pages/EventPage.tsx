@@ -109,19 +109,16 @@ export const EventPage: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 mt-6">
-                <a
-                  href="https://data-slayer.com/DaftarWebinarDAC"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-pixel text-xs font-bold text-void bg-cyan shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_25px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                <span
+                  aria-disabled="true"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-pixel text-xs font-bold text-ink-dim bg-panel/70 border border-line opacity-60 cursor-not-allowed select-none"
                 >
                   <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
-                  Daftar Webinar Sekarang
-                </a>
+                  Webinar Selesai
+                </span>
 
                 <a
                   href="https://wa.me/6282144236616"
@@ -296,19 +293,16 @@ export const EventPage: React.FC = () => {
 
             {/* Actions */}
             <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
-              <a
-                href="https://data-slayer.com/DaftarWebinarDAC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-void bg-cyan shadow-[0_4px_16px_rgba(121,174,229,0.35)] hover:shadow-[0_6px_22px_rgba(121,174,229,0.5)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              <span
+                aria-disabled="true"
+                className="inline-flex items-center gap-2.5 justify-center min-h-[44px] rounded-xl px-8 py-3.5 font-pixel text-xs font-bold text-ink-dim bg-panel/70 border border-line opacity-60 cursor-not-allowed select-none"
               >
                 <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
-                Daftar Webinar Sekarang
-              </a>
+                Webinar Selesai
+              </span>
 
               <a
                 href="https://www.instagram.com/dataslayer.tup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
