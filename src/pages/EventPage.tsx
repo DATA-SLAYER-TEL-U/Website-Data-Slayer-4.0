@@ -225,8 +225,13 @@ export const EventPage: React.FC = () => {
                     SEGERA
                   </span>
                 </div>
-                <div className="resource-link flex items-center gap-3.5 p-4 bg-panel/70 border border-line rounded-xl text-sm font-semibold opacity-60 cursor-not-allowed">
-                  <span className="text-cyan">
+                <a
+                  href="https://data-slayer.com/DOKUMENTASI-WEBINARDAC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="resource-link flex items-center gap-3.5 p-4 bg-panel/90 border border-line hover:border-cyan/50 hover:bg-panel rounded-xl text-sm font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(121,174,229,0.25)] group"
+                >
+                  <span className="text-cyan group-hover:scale-110 transition-transform">
                     <svg className="pixel-icon" width="20" height="20" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                       <rect x="0" y="2" width="8" height="5" fill="currentColor"/>
                       <rect x="2" y="1" width="2" height="1" fill="currentColor"/>
@@ -234,21 +239,26 @@ export const EventPage: React.FC = () => {
                     </svg>
                   </span>
                   <span>Dokumentasi</span>
-                  <span className="ml-auto shrink-0 inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2.5 py-1 rounded">
-                    SEGERA
+                  <span className="ml-auto shrink-0 inline-flex items-center gap-1 font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/40 px-2.5 py-1 rounded shadow-sm group-hover:bg-cyan group-hover:text-void transition-colors">
+                    BUKA ↗
                   </span>
-                </div>
-                <div className="resource-link flex items-center gap-3.5 p-4 bg-panel/70 border border-line rounded-xl text-sm font-semibold opacity-60 cursor-not-allowed">
-                  <span className="text-cyan">
+                </a>
+                <a
+                  href="https://data-slayer.com/REKAMAN-WEBINARDAC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="resource-link flex items-center gap-3.5 p-4 bg-panel/90 border border-line hover:border-cyan/50 hover:bg-panel rounded-xl text-sm font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_14px_rgba(121,174,229,0.25)] group"
+                >
+                  <span className="text-cyan group-hover:scale-110 transition-transform">
                     <svg className="pixel-icon" width="20" height="20" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                       <polygon points="2,1 2,7 7,4" fill="currentColor"/>
                     </svg>
                   </span>
                   <span>Rekaman</span>
-                  <span className="ml-auto shrink-0 inline-flex items-center font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/10 border border-cyan/30 px-2.5 py-1 rounded">
-                    SEGERA
+                  <span className="ml-auto shrink-0 inline-flex items-center gap-1 font-pixel text-[0.5rem] tracking-wider text-cyan bg-cyan/15 border border-cyan/40 px-2.5 py-1 rounded shadow-sm group-hover:bg-cyan group-hover:text-void transition-colors">
+                    TONTON ↗
                   </span>
-                </div>
+                </a>
               </div>
             </div>
           </div>
